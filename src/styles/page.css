@@ -25,7 +25,7 @@
 
       .page-subheader {
         height: px;
-        /* font-size: 100%; */
+        font-size: 140%;
         margin-left: 20px;
         text-align: left;
       }
@@ -94,4 +94,18 @@
         box-shadow: inset 0px 0 30px 0px rgba(36, 10, 3, 0.5), 10px 0 8px 0px rgba(0, 0, 0, 0.4);
       }
     }
+  }
+
+  .center-title-txt {
+    text-align: center; 
+    padding-top: 50%;
+    font-size: 210%; 
+  }
+
+  .closeOther {
+    visibility: hidden;
+  }
+
+  .openOther {
+    visibility: visible;
   }

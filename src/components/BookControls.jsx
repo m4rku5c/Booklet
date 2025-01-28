@@ -8,7 +8,7 @@ import rightArrow from '../assets/arrow-right.png'
 const BookControls = ({props, bookRef}) => {
 
       const [currentPage, setCurrentPage] = useState(0)
-      const [pageCount, setPageCount] = useState(5)
+      const [pageCount, setPageCount] = useState(90)
       const [pageInput, setPageInput] = useState("")
 
 
