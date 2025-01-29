@@ -1,0 +1,13 @@
+.side-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+
+}
+
+.side-sub-container {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

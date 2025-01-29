@@ -6,3 +6,12 @@
     justify-content: center; /* Horizontally center content */
     align-items: center; /* Vertically center content */
   }
+
+
+.closed-sidebar {
+  visibility: visible;
+}
+
+.open-sidebar {
+  visibility: hidden;
+}

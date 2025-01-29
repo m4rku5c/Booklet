@@ -15,6 +15,11 @@ import MDX from '../cards/MDX'
 import top1 from '../assets/top1.png'
 import back1 from '../assets/back1.png'
 
+import Sidebar from './Sidebar'
+import openside from '../assets/openside.png'
+import closeside from '../assets/closeside.png'
+
+
 import bluewood from '../assets/bluewood.png'
 import backgroundImage from '../assets/landing.png'
 
@@ -22,6 +27,8 @@ function MyBook(props) {
    const bookRef = useRef()
 
    const [pageCover, setPageCover] = useState(bluewood)
+
+   const [isSidebarOpen, setIsSideBarOpen] = useState(false)
 
    const handleGoTo = () => {
     if (bookRef.current) {
@@ -44,14 +51,20 @@ function MyBook(props) {
    ])
    
    const toggleSideBar = () => {
-    
+    setIsSideBarOpen(!isSidebarOpen)
    }
    
 
 
     return ( 
       <div>
-        <button onClick={toggleSideBar} style={{position: 'absolute', left: 0, top: '50%'}}>Go</button>
+        <div style={{position: 'absolute', left: 0, top: '50%'}}>
+          { isSidebarOpen ? <Sidebar sharedState={isSidebarOpen} setSharedState={setIsSideBarOpen} /> :  <button onClick={toggleSideBar} >
+            <img alt="open arrow" src={openside} width="30px" height="30px"/>
+          </button>}
+         
+        </div>
+        
         <div className="background-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
           <div className='view-point'>
             <div className='flip-book' style={{ backgroundImage: `url\(${pageCover})` }}>
