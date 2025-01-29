@@ -1,7 +1,7 @@
 .page {
     /* padding: 20px; */
   
-    background-color: hsl(29, 45%, 75%);
+    background-color: hsl(0, 0%, 93%);
     color: hsl(35, 35, 35);
     border: solid 1px hsl(35, 20, 70);
   
@@ -98,7 +98,7 @@
 
   .center-title-txt {
     text-align: center; 
-    padding-top: 50%;
+    padding-top: 40%;
     font-size: 210%; 
   }
 
@@ -108,4 +108,22 @@
 
   .openOther {
     visibility: visible;
+  }
+
+  .tocHeader {
+    
+  }
+
+  .tocHeader:hover {
+    background: rgba(118, 192, 214, 0.425);
+    border-radius: 20px;
+  }
+
+  li {
+    color: blue
+  }
+
+  li:hover {
+    background: rgba(118, 192, 214, 0.425);
+    border-radius: 20px;
   }
