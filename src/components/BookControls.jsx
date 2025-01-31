@@ -15,14 +15,14 @@ const BookControls = ({props, bookRef}) => {
       const handleNextPage = () => {
         if (bookRef.current) {
             bookRef.current.pageFlip().flipNext()
-            setCurrentPage((prev) => prev + 1)
+            setCurrentPage((prev) => prev + 2)
         }
       }
      
       const handlePrevPage = () => {
         if (bookRef.current) {
           bookRef.current.pageFlip().flipPrev()
-          setCurrentPage((prev) => prev - 1)
+          setCurrentPage((prev) => prev - 2)
         }
       }
     

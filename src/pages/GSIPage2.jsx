@@ -8,7 +8,7 @@ const GSIPage = React.forwardRef((props, ref) => {
     <div className="page page-cover page-cover-top"  ref={ref} data-density="hard" >
         <div className="page-content" >
           <div className="center-title-txt" >
-            <img src={signet} width='80%' height='250px'/>
+            <img src={props.logo} width='80%' height='250px'/>
           </div>
 
           {/* <div style={{display: 'flex', gap: '5px'}}>
