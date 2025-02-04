@@ -1,6 +1,6 @@
 import React, { useState, useRef} from 'react'
 import '../styles/mdx.css'
-import checkmark from '../assets/check.png'
+import checkmark from '../../public/assets/check.png'
 
 const MDX = React.forwardRef((props, ref) => {
 

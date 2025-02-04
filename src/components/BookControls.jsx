@@ -1,8 +1,8 @@
 import React, {useRef, useState} from 'react'
 import '../styles/book-controls.css'
 
-import leftArrow from '../assets/arrow-left.png'
-import rightArrow from '../assets/arrow-right.png'
+import leftArrow from '../../public/assets/arrow-left.png'
+import rightArrow from '../../public/assets/arrow-right.png'
 
 
 const BookControls = ({props, bookRef, currentPage, setCurrentPage}) => {

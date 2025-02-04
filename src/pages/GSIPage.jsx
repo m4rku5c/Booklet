@@ -1,6 +1,6 @@
 import React, {useState, useRef} from "react"
 import '../styles/page.css'
-import gsiLogo from '../assets/gsilogo.png'
+import gsiLogo from '../../public/assets/gsilogo.png'
 
 
 const GSIPage = React.forwardRef((props, ref) => {
