@@ -16,7 +16,7 @@ function Sidebar({sharedState, setSharedState}) {
   return (
     <div className='sidebar-main-container'>
         <div className='sidebar-sub-container'>
-            <h3>Book</h3>
+            <h3>Editor (WIP)</h3>
             <button onClick={closeSidebar}>Close</button>
         </div>
     </div>

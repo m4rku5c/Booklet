@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState, useCallback} from 'react'
 import HTMLFlipBook from "react-pageflip"
 
 import '../styles/book.css'
@@ -242,10 +242,10 @@ function MyBook(props) {
    const bookRef = useRef()
 
    const [pageCover, setPageCover] = useState(bluewood)
-
+  
    const [isSidebarOpen, setIsSideBarOpen] = useState(false)
 
-   
+   const [currentPage, setCurrentPage] = useState(0)
 
    function handleGoTo(pageNum) {
     if (bookRef.current) {
@@ -253,6 +253,11 @@ function MyBook(props) {
       console.log('flipping to page ', pageNum)
     }
    }
+
+   const onFlip = useCallback((e) => {
+    console.log('Current page: ' + e.data);
+    setCurrentPage(e.data + 1)
+}, []);
 
 
    
@@ -424,13 +429,14 @@ function MyBook(props) {
               <HTMLFlipBook width={600} height={800} ref={bookRef}
                           showCover={true}
                           mobileScrollSupport={true}
-                          useMouseEvents={false}>
+                          useMouseEvents={false}
+                          onFlip={onFlip}>
       
               {bookPages.map((page, index) => React.cloneElement(page, { key: index }))}
 
               </HTMLFlipBook>
             </div>
-            <BookControls bookRef={bookRef} />
+            <BookControls bookRef={bookRef} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
           </div>
         </div>
       </div>

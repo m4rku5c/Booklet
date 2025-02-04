@@ -28,7 +28,7 @@ const GSIPage = React.forwardRef((props, ref) => {
 
               <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-end'}}>
                 <p style={{marginLeft: '125px', marginBottom: '0px'}}>
-                  <section style={{marginLeft: '0px',all: 'unset', letterSpacing: '2px', fontSize: '35px', fontFamily: 'monospace'}}>Gemological Science</section><br/>
+                  <section style={{marginLeft: '0px',all: 'unset', letterSpacing: '2px', fontSize: '33px', fontFamily: 'monospace'}}>Gemological Science</section><br/>
                   <section style={{marginLeft: '3px', marginBottom: '-20px', letterSpacing: '17px', fontSize: '25px'}}>INTERNATIONAL</section><br/>
                   <section style={{marginLeft: '3px', marginBottom: '-15px', color: 'darkcyan', letterSpacing: '1.1px', fontSize: '20px'}}><i>Leading the way with Integrity & Innovation</i></section><br/>
                 </p>

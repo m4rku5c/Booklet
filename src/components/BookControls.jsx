@@ -5,24 +5,22 @@ import leftArrow from '../assets/arrow-left.png'
 import rightArrow from '../assets/arrow-right.png'
 
 
-const BookControls = ({props, bookRef}) => {
+const BookControls = ({props, bookRef, currentPage, setCurrentPage}) => {
 
-      const [currentPage, setCurrentPage] = useState(0)
-      const [pageCount, setPageCount] = useState(90)
+      
+      const [pageCount, setPageCount] = useState(91)
       const [pageInput, setPageInput] = useState("")
 
 
       const handleNextPage = () => {
         if (bookRef.current) {
             bookRef.current.pageFlip().flipNext()
-            setCurrentPage((prev) => prev + 2)
         }
       }
      
       const handlePrevPage = () => {
         if (bookRef.current) {
           bookRef.current.pageFlip().flipPrev()
-          setCurrentPage((prev) => prev - 2)
         }
       }
     
@@ -32,7 +30,6 @@ const BookControls = ({props, bookRef}) => {
         const pageNumber = parseInt(pageInput, 10) - 1 // Convert input to zero-based index
         if (bookRef.current && pageNumber >= 0 && pageNumber < pageCount) { // sCheck valid range
           bookRef.current.pageFlip().flip(pageNumber, "top")
-          setCurrentPage(pageNumber + 1)
           setPageInput("")
         } else {
           alert("Invalid page number. Please enter a number between 1 and " + pageCount)
