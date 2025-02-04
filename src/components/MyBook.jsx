@@ -27,7 +27,10 @@ import backgroundImage from '../assets/landing.png'
 
 
 //KAY Natural
-import kay_natural_21_top from '../assets/booklet/kay/natural/kay-21-bridal-reg-top.png'
+// import kay_natural_21_top from '../assets/booklet/kay/natural/kay-21-bridal-reg-top.png'
+const kay_natural_21_top = new URL('../assets/booklet/kay/natural/kay-21-bridal-reg-top.png', import.meta.url).href;
+
+
 import kay_natural_21_back from '../assets/booklet/kay/natural/kay-21-bridal-reg-back.png'
 
 import kay_natural_22_top from '../assets/booklet/kay/natural/kay-22-bridal-sol-top.png'
