@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import "../styles/page.css"
+import uparrow from '../../public/assets/uparrow.png'
+import uparrow2 from '../../public/assets/up.png'
 
 const TableOfContents = React.forwardRef((props, ref) => {
   const [openCategory, setOpenCategory] = useState(null)
@@ -99,7 +101,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
 
             {openCategory === "kay" && (
               <>
-                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>KAY</li>
+                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>KAY  <img src={uparrow2} width="15px" height="15px"/></li>
                 <ul className="layer2">
                   <li onClick={() => toggleLayer("minedDiamond")}>Natural Diamond</li>
                   {expanded.minedDiamond && (
@@ -144,7 +146,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
 
               {openCategory === "kayoutlet" && (
               <>
-                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>KAY Outlet</li>
+                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>KAY Outlet <img src={uparrow2} width="15px" height="15px"/></li>
                 <ul className="layer2">
                   <li onClick={() => toggleLayer("minedDiamond")}>Natural Diamond</li>
                   {expanded.minedDiamond && (
@@ -184,7 +186,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
 
 {openCategory === "jared" && (
               <>
-                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Jared</li>
+                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Jared <img src={uparrow2} width="15px" height="15px"/></li>
                 <ul className="layer2">
                   <li onClick={() => toggleLayer("minedDiamond")}>Natural Diamond</li>
                   {expanded.minedDiamond && (
@@ -225,7 +227,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
 
               {openCategory === "jaredvault" && (
               <>
-                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Jared Vault</li>
+                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Jared Vault <img src={uparrow2} width="15px" height="15px"/></li>
                 <ul className="layer2">
                   <li onClick={() => toggleLayer("minedDiamond")}>Natural Diamond</li>
                   {expanded.minedDiamond && (
@@ -256,7 +258,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
 
 {openCategory === "peoples" && (
               <>
-                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Peoples</li>
+                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Peoples <img src={uparrow2} width="15px" height="15px"/></li>
                 <ul className="layer2">
                   <li onClick={() => toggleLayer("minedDiamond")}>Natural Diamond</li>
                   {expanded.minedDiamond && (
@@ -297,7 +299,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
 
 {openCategory === "zales" && (
               <>
-                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Zales</li>
+                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Zales <img src={uparrow2} width="15px" height="15px"/></li>
                 <ul className="layer2">
                   <li onClick={() => toggleLayer("minedDiamond")}>Natural Diamond</li>
                   {expanded.minedDiamond && (
@@ -349,7 +351,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
 
 {openCategory === "zalesoutlet" && (
               <>
-                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Zales Outlet</li>
+                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>Zales Outlet <img src={uparrow2} width="15px" height="15px"/></li>
                 <ul className="layer2">
                   <li onClick={() => toggleLayer("minedDiamond")}>Natural Diamond</li>
                   {expanded.minedDiamond && (

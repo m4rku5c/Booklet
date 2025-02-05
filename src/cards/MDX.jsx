@@ -9,6 +9,23 @@ const MDX = React.forwardRef((props, ref) => {
       const handleMouseOver = () => {setShowPopout(true)}
       const handleMouseOut = () => {setShowPopout(false)}
       const handleFlip = () => {setIsFlipped(!isFlipped)}
+
+      const [certSelected, setCertSelected] = useState(0)
+
+      const [certSet, setCertSet] = useState([
+            {
+              frontImg: props.frontImg,
+              backImg: props.backImg
+            },
+            {
+              frontImg: props.frontImg2,
+              backImg: props.backImg2
+            },
+            {
+              frontImg: props.frontImg3,
+              backImg: props.backImg3
+            },
+      ])
     
       return (
         <div style={{display: "flex", marginLeft:'20px', position: 'absolute', top: 0, left: 0, marginTop: '140px'}} >
@@ -47,7 +64,8 @@ const MDX = React.forwardRef((props, ref) => {
             >
             <div className="new-cardclickflip-inner">
               <div className="new-cardclickflip-front">
-                <img src={props.frontImg} className="card-image"/>
+                {/* <img src={props.frontImg} className="card-image"/> */}
+                <img src={certSet[0].frontImg} className="card-image"/>
               </div>
               <div className="new-cardclickflip-back">
                 <img src={props.backImg} className="card-image"/>

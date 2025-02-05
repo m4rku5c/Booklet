@@ -5,6 +5,7 @@ import '../styles/book.css'
 import '../styles/main-container.css'
 
 import DefaultPageLayout from '../pages/DefaultPage'
+import DefaultPageLayout2 from '../pages/DefaultPage2'
 import BookControls from './BookControls'
 import TableOfContents from '../pages/TableOfContents'
 
@@ -14,6 +15,10 @@ import GSIPage3 from '../pages/GSIPage3'
 import signet from '../../public/assets/signet.png'
 
 import MDX from '../cards/MDX'
+import MDX2 from '../cards/MDX2'
+
+import Pricing from './Pricing'
+
 import top1 from '../../public/assets/top1.png'
 import back1 from '../../public/assets/back1.png'
 
@@ -238,7 +243,7 @@ import zo_r_51_top from '../../public/assets/booklet/ZalesOutlet/ruby/zaleso-r-5
 import zo_r_52_top from '../../public/assets/booklet/ZalesOutlet/ruby/zaleso-r-52-top.png'
 import zo_r_52_back from '../../public/assets/booklet/ZalesOutlet/ruby/zaleso-r-52-back.png'
 
-
+import Details from './Details'
 
 function MyBook(props) {
    const bookRef = useRef()
@@ -270,9 +275,15 @@ function MyBook(props) {
         <TableOfContents functionInput={handleGoTo} />,
         //<DefaultPageLayout header="header" headertwo="subheader" footer="2" content={<MDX frontImg={top1} backImg={back1}/>}/>,
         // Kay Pages
+          <GSIPage3 header="KAY"/>,
           <GSIPage3 header="KAY Natural"/>,
           //Natural
           <DefaultPageLayout header="KAY/Natural Diamond/21 - Bridal Reg" footer="5" content={<MDX frontImg={kay_natural_21_top} backImg={kay_natural_21_back}/>}/>,
+          <DefaultPageLayout2 header="Details" footer="+" content={<Details />}/>,
+          // Testing 2/5/25
+          <DefaultPageLayout header="T KAY/Natural Diamond/21 - Bridal Reg" footer="5" content={<MDX2 frontImg={kay_natural_21_top} backImg={kay_natural_21_back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Details" footer="+" content={<><Details />  </>}/>,
+          
           <DefaultPageLayout header="KAY/Natural Diamond/22 - Bridal Solitaire" footer="6" content={<MDX frontImg={kay_natural_22_top} backImg={kay_natural_22_back}/>}/>,
           <DefaultPageLayout header="KAY/Natural Diamond/25 - Solitaire Studs | Pendants" footer="7" content={<MDX frontImg={kay_natural_25_top} backImg={kay_natural_25_back}/>}/>,
           <DefaultPageLayout header="KAY/Natural Diamond/34 - Anniversary | Fashion" footer="8" content={<MDX frontImg={kay_natural_34_top} backImg={kay_natural_34_back}/>}/>,
