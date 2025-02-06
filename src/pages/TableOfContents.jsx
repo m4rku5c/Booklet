@@ -82,7 +82,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
       <div className="page-content">
         <h2 className="page-header">
           Welcome To Signet:
-          <br /> GSI Catalogue
+          <br /> GSI Catalog
         </h2>
         <div style={{ position: "absolute", top: 0, left: 0, marginTop: "140px", cursor: "pointer" }}>
           <ul className="layer1" style={{ fontSize: "25px" }}>

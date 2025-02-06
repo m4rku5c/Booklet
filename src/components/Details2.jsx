@@ -31,37 +31,37 @@ const Details2 = (props) => {
                     </div>
                     <div className=''>
                       <img src={checkbox} width="20px" height="20px" />
-                      <a>Center Stone Actual Color</a>
+                      <a>Center Stone(s) Actual Color</a>
                       
                     </div>
 
                     <div className=''>
                       <img src={checkbox} width="20px" height="20px" />
-                      <a>Center Stone Actual Clarity</a>
+                      <a>Center Stone(s) Actual Clarity</a>
                       
                     </div>
 
                     <div className=''>
                       <img src={checkbox} width="20px" height="20px" />
-                      <a>Center Stone Actual Carat Weight</a>
+                      <a>Center Stone(s) Actual Carat Weight</a>
                       
                     </div>
 
                     <div className=''>
                       <img src={box} width="20px" height="20px" />
-                      <a>Side Stone Minimum Color <a style={{color: 'red'}}>*</a></a>
+                      <a>Side Stone(s) Minimum Color <a style={{color: 'red'}}>*</a></a>
                       
                     </div>
 
                     <div className=''>
                       <img src={box} width="20px" height="20px" />
-                      <a>Side Stone Minimum Clarity <a style={{color: 'red'}}>*</a></a>
+                      <a>Side Stone(s) Minimum Clarity <a style={{color: 'red'}}>*</a></a>
                       
                     </div>
 
                     <div className=''>
                       <img src={box} width="20px" height="20px" />
-                      <a>Side Stone Minimum Carat Weight</a>
+                      <a>Side Stone(s) Minimum Carat Weight</a>
                       
                     </div>
 

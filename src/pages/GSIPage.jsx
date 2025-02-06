@@ -9,7 +9,7 @@ const GSIPage = React.forwardRef((props, ref) => {
     <div className="page page-cover page-cover-top"  ref={ref} data-density="hard" >
         <div className="page-content" >
           <div className="center-title-txt" >
-            <h2>GSI CERTIFICATE CATALOGUE</h2>
+            <h2>GSI CERTIFICATE CATALOG</h2>
             <h4>Prepared Exclusively for<br></br> Signet Jewelers</h4>
           </div>
 

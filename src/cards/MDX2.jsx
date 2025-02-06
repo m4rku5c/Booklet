@@ -125,7 +125,7 @@ const MDX2 = React.forwardRef((props, ref) => {
         </div>
         <div className="new-card-wrapper">
             {/* <a>{props.subtitle}</a> */}
-            <a>K-NAT-21-P</a>
+            <a>{props.subtitle}</a>
           <div
             className={`new-cardclickflip ${isFlipped ? 'flipped' : ''}`}
             onMouseOver={handleMouseOver}
