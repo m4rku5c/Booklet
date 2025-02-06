@@ -6,7 +6,7 @@ import checkmark from '../../public/assets/check.png'
 import box from '../../public/assets/box.png'
 import checkbox from  '../../public/assets/checkbox.png'
 
-const Details = (props) => {
+const Details2 = (props) => {
   return (
     <div style={{display:'flex', flexDirection:'column', justifyContent: 'center', alignItems:'center', }}>
         {/* <img src={tag} height='70px' width="200px" style={{marginBottom:"60px"}}/> */}
@@ -48,13 +48,13 @@ const Details = (props) => {
                     </div>
 
                     <div className=''>
-                      <img src={checkbox} width="20px" height="20px" />
+                      <img src={box} width="20px" height="20px" />
                       <a>Side Stone Minimum Color <a style={{color: 'red'}}>*</a></a>
                       
                     </div>
 
                     <div className=''>
-                      <img src={checkbox} width="20px" height="20px" />
+                      <img src={box} width="20px" height="20px" />
                       <a>Side Stone Minimum Clarity <a style={{color: 'red'}}>*</a></a>
                       
                     </div>
@@ -234,4 +234,4 @@ const Details = (props) => {
   )
 }
 
-export default Details
+export default Details2

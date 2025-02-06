@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/pricing.css'
 
-const Pricing = (props) => {
+const PricingBig = (props) => {
   return (
     <div>
         <table>
@@ -10,56 +10,66 @@ const Pricing = (props) => {
                 <th>GSI Cert Price</th>
             </tr>
             <tr>
-                <td>Up to 0.28ct</td>
+                <td>Up to 0.28ct twt</td>
                 <td>{props.price1}</td>
             </tr>
             <tr>
-                <td>0.29 - 0.44ct</td>
+                <td>0.29 - 0.37ct twt</td>
                 <td>{props.price2}</td>
             </tr>
             <tr>
-                <td>0.45 - 0.87ct</td>
+                <td>0.38 - 0.44ct twt</td>
                 <td>{props.price3}</td>
             </tr>
             <tr>
-                <td>0.88 - 0.94ct</td>
+                <td>0.45 - 0.57ct twt</td>
                 <td>{props.price4}</td>
             </tr>
             <tr>
-                <td>0.95 - 1.28ct</td>
+                <td>0.58 - 0.68ct twt</td>
                 <td>{props.price5}</td>
             </tr>
             <tr>
-                <td>1.29 - 1.44ct</td>
+                <td>0.69 - 0.94ct twt</td>
                 <td>{props.price6}</td>
             </tr>
             <tr>
-                <td>1.45 - 1.94ct</td>
+                <td>0.95 - 1.28ct twt</td>
                 <td>{props.price7}</td>
             </tr>
             <tr>
-                <td>1.95 - 2.44ct</td>
+                <td>1.29 - 1.44ct twt</td>
                 <td>{props.price8}</td>
             </tr>
             <tr>
-                <td>2.45 - 3.94ct</td>
+                <td>1.45 - 1.94ct twt</td>
                 <td>{props.price9}</td>
             </tr>
             <tr>
-                <td>3.95 - 4.44ct</td>
+                <td>1.95 - 2.44ct twt</td>
                 <td>{props.price10}</td>
             </tr>
             <tr>
-                <td>4.45 - 4.94ct</td>
+                <td>2.45 - 3.94ct twt</td>
                 <td>{props.price11}</td>
             </tr>
             <tr>
-                <td>4.95 - 5.44ct</td>
+                <td>3.95 - 4.44ct twt</td>
                 <td>{props.price12}</td>
             </tr>
             <tr>
-                <td>5.45 - 5.94ct</td>
+                <td>4.45 - 4.94ct twt</td>
                 <td>{props.price13}</td>
+            </tr>
+
+            <tr>
+                <td>4.95 - 5.44ct twt</td>
+                <td>{props.price14}</td>
+            </tr>
+
+            <tr>
+                <td>5.45 - 5.94ct twt</td>
+                <td>{props.price15}</td>
             </tr>
         </table>
 
@@ -76,4 +86,4 @@ const Pricing = (props) => {
   )
 }
 
-export default Pricing
+export default PricingBig

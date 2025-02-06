@@ -25,6 +25,18 @@ const TableOfContents = React.forwardRef((props, ref) => {
         ...prev,
         ["lcd"]: false,
         ["gemstone"] : false,
+        ["brands"] : false,
+      }));
+
+      
+    }
+
+    if (layer === "brands") {
+      setExpanded((prev) => ({
+        ...prev,
+        ["lcd"]: false,
+        ["gemstone"] : false,
+        ["minedDiamond"] : false,
       }));
 
       
@@ -35,6 +47,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
         ...prev,
         ["minedDiamond"]: false,
         ["gemstone"] : false,
+        ["brands"] : false,
       }));
     }
 
@@ -43,6 +56,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
         ...prev,
         ["minedDiamond"]: false,
         ["lcd"] : false,
+        ["brands"] : false,
       }));
     }
     
@@ -55,6 +69,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
       ["gemstone"]: false,
       ["minedDiamond"]: false,
       ["lcd"] : false,
+      ["brands"] : false,
     }));
   }
 
@@ -107,11 +122,16 @@ const TableOfContents = React.forwardRef((props, ref) => {
                   {expanded.minedDiamond && (
                    <ul>
                         
-                   <li>21 - Bridal REG ................................. <button onClick={() => props.functionInput(4)} style={{all: 'unset'}}>5</button></li>
+                   <li>21 - Bridal Regular ............................. <button onClick={() => props.functionInput(4)} style={{all: 'unset'}}>5</button></li>
                    <li>22 - Bridal Solitaire ............................ <button onClick={() => props.functionInput(6)} style={{all: 'unset'}}>6</button></li>
-                   <li>25 - Solitaire Studs | Pendants .............<button onClick={() => props.functionInput(7)} style={{all: 'unset'}}>7</button></li>
-                   <li>34 - Anniversary | Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
-
+                   <li>23 - 3 Stone Styles .............................. <button onClick={() => props.functionInput(11)} style={{all: 'unset'}}>11</button></li>
+                   <li>24 - 2 Stone Styles .............................. <button onClick={() => props.functionInput(12)} style={{all: 'unset'}}>12</button></li>
+                   <li>25 - Solitaire Studs .............<button onClick={() => props.functionInput(7)} style={{all: 'unset'}}>7</button></li>
+                   <li>26 - Solitaire Pendants .............<button onClick={() => props.functionInput(7)} style={{all: 'unset'}}>7</button></li>
+                   <li>27 - Anniversary .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>28 - Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>29 - Color Diamond .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   
                    
                   
                </ul>
@@ -119,14 +139,37 @@ const TableOfContents = React.forwardRef((props, ref) => {
                   <li onClick={() => toggleLayer("lcd")}>Lab Created Diamond</li>
                   {expanded.lcd && (
                     <ul>
-                    <li>21 - Bridal REG .................................. <button onClick={() => props.functionInput(10)} style={{all: 'unset'}}>10</button></li>
+                    {/* <li>21 - Bridal Regular .................................. <button onClick={() => props.functionInput(10)} style={{all: 'unset'}}>10</button></li>
                     <li>23 - 3 Stone Styles .............................. <button onClick={() => props.functionInput(11)} style={{all: 'unset'}}>11</button></li>
                     <li>24 - 2 Stone Styles .............................. <button onClick={() => props.functionInput(12)} style={{all: 'unset'}}>12</button></li>
                     <li>25 - Solitaire Studs | Pendants ............. <button onClick={() => props.functionInput(13)} style={{all: 'unset'}}>13</button></li>
                     <li>31 - Bridal CTR-CTW ......................... <button onClick={() => props.functionInput(14)} style={{all: 'unset'}}>14</button></li>
                     <li>33 - Solitaire Studs | Pendants ............. <button onClick={() => props.functionInput(15)} style={{all: 'unset'}}>15</button></li>
                     <li>34 - Anniversary | Fashion ................... <button onClick={() => props.functionInput(16)} style={{all: 'unset'}}>16</button></li>
+                    
+                    */}
                    
+                   <li>21 - Bridal Regular ............................. <button onClick={() => props.functionInput(4)} style={{all: 'unset'}}>5</button></li>
+                   <li>22 - Bridal Solitaire ............................ <button onClick={() => props.functionInput(6)} style={{all: 'unset'}}>6</button></li>
+                   <li>23 - 3 Stone Styles .............................. <button onClick={() => props.functionInput(11)} style={{all: 'unset'}}>11</button></li>
+                   <li>24 - 2 Stone Styles .............................. <button onClick={() => props.functionInput(12)} style={{all: 'unset'}}>12</button></li>
+                   <li>25 - Solitaire Studs .............<button onClick={() => props.functionInput(7)} style={{all: 'unset'}}>7</button></li>
+                   <li>26 - Solitaire Pendants .............<button onClick={() => props.functionInput(7)} style={{all: 'unset'}}>7</button></li>
+                   <li>27 - Anniversary .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>28 - Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>29 - Color Diamond .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>31 - Minimum Bridal Stone .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>32 - Minimum Bridal Solitaire .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>33 - Minimum Studs | Solitaire Pendants ..... <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>34 - Minimum Anniversary .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>35 - Minimum Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>36 - Minimum Mens .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+
+
+
+
+
+
                   </ul>
                   )}
                   
@@ -136,7 +179,174 @@ const TableOfContents = React.forwardRef((props, ref) => {
                     <ul>
                     <li>51 - Ruby Only ................................... <button onClick={() => props.functionInput(18)} style={{all: 'unset'}}>18</button></li>
                     <li>52 - Ruby & Natural Diamond ........... <button onClick={() => props.functionInput(19)} style={{all: 'unset'}}>19</button></li>
+                    <li>52 - Ruby & Lab Created Diamond ........... <button onClick={() => props.functionInput(19)} style={{all: 'unset'}}>19</button></li>
                   </ul>
+                  )}
+
+<li onClick={() => toggleLayer("brands")}>Brands / Collections</li>
+                  {expanded.brands && (
+                    <ul className="layer 3">
+
+                                <li onClick={() => toggleLayer("leo")}>The Leo Diamond</li>
+                                {expanded.leo && (
+                                  <ul className="layer 4">
+                                  <li onClick={() => toggleLayer("naturalleo")}>Natural</li>
+                                    {expanded.naturalleo && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+                                <li onClick={() => toggleLayer("leofl")}>Leo First Light</li>
+                                {expanded.leofl && (
+                                  <ul className="layer 4">
+                                  <li onClick={() => toggleLayer("naturalleofl")}>Natural</li>
+                                    {expanded.naturalleofl && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("leoideal")}>Leo Ideal</li>
+                                {expanded.leoideal && (
+                                  <ul className="layer 4">
+                                      <li onClick={() => toggleLayer("naturalleoideal")}>Natural</li>
+                                    {expanded.naturalleoideal && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("leop")}>Leo Prisma</li>
+                                {expanded.leop && (
+                                  <ul className="layer 4">
+                                  <li onClick={() => toggleLayer("naturalleoprisma")}>Natural</li>
+                                    {expanded.naturalleoprisma && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("leoleg")}>Leo Legacy</li>
+                                {expanded.leoleg && (
+                                  <ul className="layer 4">
+                                  <li onClick={() => toggleLayer("naturalleolegacy")}>Lab Created Diamond</li>
+                                    {expanded.naturalleolegacy && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+
+                                    
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("neillane")}>Neil Lane</li>
+                                {expanded.neillane && (
+                                  <ul className="layer 4">
+                                  <li onClick={() => toggleLayer("neillanenat")}>Natural</li>
+                                    {expanded.neillanenat && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                    <li onClick={() => toggleLayer("neillanelcd")}>Lab Created Diamond</li>
+                                    {expanded.neillanelcd && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                    <li onClick={() => toggleLayer("neillaneruby")}>Ruby</li>
+                                    {expanded.neillaneruby && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("monique")}>Monique Lhuillier Bliss</li>
+                                {expanded.monique && (
+                                  <ul className="monique">
+                                  <li onClick={() => toggleLayer("mnat")}>Natural</li>
+                                    {expanded.mnat && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                    <li onClick={() => toggleLayer("mlcd")}>Lab Created Diamond</li>
+                                    {expanded.mlcd && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("mmm")}>Memories Moments Magic</li>
+                                {expanded.mmm && (
+                                  <ul className="layer 4">
+                                 
+                                    <li onClick={() => toggleLayer("mmmlcd")}>Lab Created Diamond</li>
+                                    {expanded.mmmlcd && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("naf")}>Now and Forever</li>
+                                {expanded.naf && (
+                                  <ul className="layer 4">
+                                  <li onClick={() => toggleLayer("nafnat")}>Natural</li>
+                                    {expanded.nafnat && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                    <li onClick={() => toggleLayer("naflcd")}>Lab Created Diamond</li>
+                                    {expanded.naflcd && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("kaysig")}>Kay Signature</li>
+                                {expanded.kaysig && (
+                                  <ul className="layer 4">
+                                  <li onClick={() => toggleLayer("kaysiglcd")}>Lab Created Diamond</li>
+                                    {expanded.kaysiglcd && (
+                                      <ul className="layer 5">
+                                      
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+{/* 
+<li onClick={() => toggleLayer("levian")}>Levian</li>
+                                {expanded.levian && (
+                                  <ul className="layer 4">
+                                  
+                                </ul>
+                                )} */}
+
+                                
+                                
+
+                    
+                   
+                    </ul>
                   )}
 
 

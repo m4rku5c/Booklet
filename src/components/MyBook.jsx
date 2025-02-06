@@ -243,7 +243,17 @@ import zo_r_51_top from '../../public/assets/booklet/ZalesOutlet/ruby/zaleso-r-5
 import zo_r_52_top from '../../public/assets/booklet/ZalesOutlet/ruby/zaleso-r-52-top.png'
 import zo_r_52_back from '../../public/assets/booklet/ZalesOutlet/ruby/zaleso-r-52-back.png'
 
+import kkt from '../../public/assets/booklet/Kay/Natural/kkt.png'
+import kkb from '../../public/assets/booklet/Kay/Natural/kkb.png'
+
+import kkst from '../../public/assets/booklet/Kay/Natural/kkst.png'
+import kkpt from '../../public/assets/booklet/Kay/Natural/kkpt.png'
+
+import whitetag from '../../public/assets/a.png'
+import rattail from '../../public/assets/rattail.png'
+
 import Details from './Details'
+import Details2 from './Details2'
 
 function MyBook(props) {
    const bookRef = useRef()
@@ -264,7 +274,43 @@ function MyBook(props) {
    const onFlip = useCallback((e) => {
     console.log('Current page: ' + e.data);
     setCurrentPage(e.data + 1)
+    console.log("price menu: ", priceMenu[0].p1)
 }, []);
+
+  const priceMenu = [
+    {
+      p1: "$ 8.55",
+      p2: "$ 9.50",
+      p3: "$ 9.50",
+      p4: "$ 11.90",
+      p5: "$ 12.11",
+      p6: "$ 14.11",
+      p7: "$ 20.19",
+      p8: "$ 22.19",
+      p9: "$ 25.84",
+      p10: "$ 28.26",
+      p11: "$ 32.49",
+      p12: "$ 37.36",
+      p13: "$ 42.96",
+      p14: "$ 49.40",
+      p15: "$ 56.81",
+    }, 
+    {
+      p1: "$ 10.55",
+      p2: "$ 11.69",
+      p3: "$ 13.18",
+      p4: "$ 15.30",
+      p5: "$ 18.96",
+      p6: "$ 21.00",
+      p7: "$ 27.46",
+      p8: "$ 29.50",
+      p9: "$ 30.20",
+      p10: "$ 33.22",
+      p11: "$ 36.54",
+      p12: "$ 40.19",
+      p13: "$ 44.20",
+    }
+  ]
 
 
    
@@ -278,11 +324,20 @@ function MyBook(props) {
           <GSIPage3 header="KAY"/>,
           <GSIPage3 header="KAY Natural"/>,
           //Natural
-          <DefaultPageLayout header="KAY/Natural Diamond/21 - Bridal Reg" footer="5" content={<MDX frontImg={kay_natural_21_top} backImg={kay_natural_21_back}/>}/>,
+          <DefaultPageLayout header="KAY/Natural Diamond/21 - Bridal Reg" footer="6" content={<MDX frontImg={kay_natural_21_top} backImg={kay_natural_21_back}/>}/>,
           <DefaultPageLayout2 header="Details" footer="+" content={<Details />}/>,
           // Testing 2/5/25
-          <DefaultPageLayout header="T KAY/Natural Diamond/21 - Bridal Reg" footer="5" content={<MDX2 frontImg={kay_natural_21_top} backImg={kay_natural_21_back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Details" footer="+" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Bridal Regular/ Full Certification" footer="8" content={<MDX2 tail={whitetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={kkt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="+" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Bridal Solitare/ Full Certification" footer="10" content={<MDX2 tail={whitetag}  menuType={'false'} priceMenu={priceMenu[1]} frontImg={kay_natural_22_top} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="+" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Solitare Studs/ Full Certification" footer="12" content={<MDX2 tail={rattail} priceMenu={priceMenu[0]} frontImg={kkst} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="+" content={<><Details2 />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Solitare Pendants/ Full Certification" footer="14" content={<MDX2 tail={rattail} priceMenu={priceMenu[1]} frontImg={kkpt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="+" content={<><Details2 />  </>}/>,
           
           <DefaultPageLayout header="KAY/Natural Diamond/22 - Bridal Solitaire" footer="6" content={<MDX frontImg={kay_natural_22_top} backImg={kay_natural_22_back}/>}/>,
           <DefaultPageLayout header="KAY/Natural Diamond/25 - Solitaire Studs | Pendants" footer="7" content={<MDX frontImg={kay_natural_25_top} backImg={kay_natural_25_back}/>}/>,

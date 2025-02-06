@@ -25,16 +25,16 @@ td img {
 } */
 
 td:nth-child(even) {
-  background-color: rgba(150, 212, 212, 0.4);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 tr:nth-child(odd) {
   background-color: rgba(81, 102, 102, 0.342);
 }
-
-th:nth-child(even) {
-  background-color: rgba(103, 145, 145, 0.4);
-}
+/* 
+th:nth-child(even), {
+  background-color: rgba(0, 0, 0, 0.4);
+} */
 
 td:nth-child(odd) {
   /* background-color: rgba(121, 153, 153, 0.342); */
