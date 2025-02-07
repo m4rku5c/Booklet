@@ -91,9 +91,9 @@ const TableOfContents = React.forwardRef((props, ref) => {
             {openCategory === null && (
               <>
                 <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel("kay")}>
-                  KAY ................................................................... 4
+                  KAY ................................................................... <button onClick={() => props.functionInput(4)} style={{all: 'unset'}}>4</button>
                 </li>
-                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel("kayoutlet")}>
+                {/* <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel("kayoutlet")}>
                   KAY Outlet ........................................................ 20
                 </li>
                 <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel("jared")}>
@@ -110,7 +110,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
                 </li>
                 <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel("zalesoutlet")}>
                   Zales Outlet ........................................................ 83
-                </li>
+                </li> */}
               </>
             )}
 
@@ -122,15 +122,15 @@ const TableOfContents = React.forwardRef((props, ref) => {
                   {expanded.minedDiamond && (
                    <ul>
                         
-                   <li>21 - Bridal Regular ............................. <button onClick={() => props.functionInput(4)} style={{all: 'unset'}}>5</button></li>
-                   <li>22 - Bridal Solitaire ............................ <button onClick={() => props.functionInput(6)} style={{all: 'unset'}}>6</button></li>
-                   <li>23 - 3 Stone Styles .............................. <button onClick={() => props.functionInput(11)} style={{all: 'unset'}}>11</button></li>
-                   <li>24 - 2 Stone Styles .............................. <button onClick={() => props.functionInput(12)} style={{all: 'unset'}}>12</button></li>
-                   <li>25 - Solitaire Studs .............<button onClick={() => props.functionInput(7)} style={{all: 'unset'}}>7</button></li>
-                   <li>26 - Solitaire Pendants .............<button onClick={() => props.functionInput(7)} style={{all: 'unset'}}>7</button></li>
-                   <li>27 - Anniversary .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
-                   <li>28 - Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
-                   <li>29 - Color Diamond .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>21 - Bridal Regular ................................. <button onClick={() => props.functionInput(6)} style={{all: 'unset'}}>6</button></li>
+                   <li>22 - Bridal Solitaire ................................ <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>23 - 3 Stone Styles ............................... <button onClick={() => props.functionInput(10)} style={{all: 'unset'}}>10</button></li>
+                   {/* <li>24 - 2 Stone Styles .............................. <button onClick={() => props.functionInput(12)} style={{all: 'unset'}}></button></li> */}
+                   <li>25 - Solitaire Studs ............................... <button onClick={() => props.functionInput(12)} style={{all: 'unset'}}>12</button></li>
+                   <li>26 - Solitaire Pendants ......................... <button onClick={() => props.functionInput(14)} style={{all: 'unset'}}>14</button></li>
+                   <li>34 - Minimum Anniversary ................... <button onClick={() => props.functionInput(16)} style={{all: 'unset'}}>16</button></li>
+                   <li>35 - Minimum Fashion ......................... <button onClick={() => props.functionInput(18)} style={{all: 'unset'}}>18</button></li>
+                   {/* <li>29 - Color Diamond .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>22</button></li> */}
                    
                    
                   
@@ -149,13 +149,18 @@ const TableOfContents = React.forwardRef((props, ref) => {
                     
                     */}
                    
-                   <li>21 - Bridal Regular ............................. <button onClick={() => props.functionInput(4)} style={{all: 'unset'}}>5</button></li>
-                   <li>22 - Bridal Solitaire ............................ <button onClick={() => props.functionInput(6)} style={{all: 'unset'}}>6</button></li>
-                   <li>23 - 3 Stone Styles .............................. <button onClick={() => props.functionInput(11)} style={{all: 'unset'}}>11</button></li>
-                   <li>24 - 2 Stone Styles .............................. <button onClick={() => props.functionInput(12)} style={{all: 'unset'}}>12</button></li>
-                   <li>25 - Solitaire Studs .............<button onClick={() => props.functionInput(7)} style={{all: 'unset'}}>7</button></li>
-                   <li>26 - Solitaire Pendants .............<button onClick={() => props.functionInput(7)} style={{all: 'unset'}}>7</button></li>
-                   <li>27 - Anniversary .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>21 - Bridal Regular ................................ <button onClick={() => props.functionInput(22)} style={{all: 'unset'}}>22</button></li>
+                   <li>22 - Bridal Solitaire ............................... <button onClick={() => props.functionInput(24)} style={{all: 'unset'}}>24</button></li>
+                   <li>23 - 3 Stone Styles ................................ <button onClick={() => props.functionInput(26)} style={{all: 'unset'}}>26</button></li>
+                   <li>24 - 2 Stone Styles ................................ <button onClick={() => props.functionInput(28)} style={{all: 'unset'}}>28</button></li>
+                   <li>25 - Solitaire Studs ................................ <button onClick={() => props.functionInput(30)} style={{all: 'unset'}}>30</button></li>
+                   <li>26 - Solitaire Pendants .......................... <button onClick={() => props.functionInput(32)} style={{all: 'unset'}}>32</button></li>
+                   <li>31 - Minimum Bridal .............................. <button onClick={() => props.functionInput(34)} style={{all: 'unset'}}>34</button></li>
+                   <li>32 - Minimum Bridal Solitaire ............... <button onClick={() => props.functionInput(36)} style={{all: 'unset'}}>36</button></li>
+                   <li>33 - Solitaire Studs ................................ <button onClick={() => props.functionInput(38)} style={{all: 'unset'}}>38</button></li>
+                   <li>34 - Anniversary ..................................... <button onClick={() => props.functionInput(40)} style={{all: 'unset'}}>40</button></li>
+                   <li>35 - Fahsion ............................................ <button onClick={() => props.functionInput(42)} style={{all: 'unset'}}>42</button></li>
+                   {/* <li>27 - Anniversary .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>28 - Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>29 - Color Diamond .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>31 - Minimum Bridal Stone .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
@@ -163,7 +168,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
                    <li>33 - Minimum Studs | Solitaire Pendants ..... <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>34 - Minimum Anniversary .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>35 - Minimum Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
-                   <li>36 - Minimum Mens .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
+                   <li>36 - Minimum Mens .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li> */}
 
 
 
@@ -177,9 +182,8 @@ const TableOfContents = React.forwardRef((props, ref) => {
                   <li onClick={() => toggleLayer("gemstone")}>Ruby</li>
                   {expanded.gemstone && (
                     <ul>
-                    <li>51 - Ruby Only ................................... <button onClick={() => props.functionInput(18)} style={{all: 'unset'}}>18</button></li>
-                    <li>52 - Ruby & Natural Diamond ........... <button onClick={() => props.functionInput(19)} style={{all: 'unset'}}>19</button></li>
-                    <li>52 - Ruby & Lab Created Diamond ........... <button onClick={() => props.functionInput(19)} style={{all: 'unset'}}>19</button></li>
+                    <li>51 - Ruby Only ........................................ <button onClick={() => props.functionInput(46)} style={{all: 'unset'}}>46</button></li>
+                    <li>52 - Ruby & Natural Diamond ................ <button onClick={() => props.functionInput(47)} style={{all: 'unset'}}>47</button></li>
                   </ul>
                   )}
 
@@ -353,8 +357,8 @@ const TableOfContents = React.forwardRef((props, ref) => {
                 </ul>
               </>
             )}
-
-              {openCategory === "kayoutlet" && (
+              {/* Kay outlet start here and others */}
+              {/* {openCategory === "kayoutlet" && (
               <>
                 <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel(null)}>KAY Outlet <img src={uparrow2} width="15px" height="15px"/></li>
                 <ul className="layer2">
@@ -589,7 +593,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
 
                 </ul>
               </>
-            )}
+            )} */}
 
 
             
@@ -609,7 +613,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
             )} */}
           </ul>
         </div>
-        <div className="page-footer">{props.footer}</div>
+        {/* <div className="page-footer">{props.footer}</div> */}
       </div>
     </div>
   )

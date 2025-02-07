@@ -328,9 +328,9 @@ function MyBook(props) {
    }
 
    const onFlip = useCallback((e) => {
-    console.log('Current page: ' + e.data);
+    console.log('Current page: ' + (e.data + 1));
     setCurrentPage(e.data + 1)
-    console.log("price menu: ", priceMenu[0].p1)
+    //console.log("price menu: ", priceMenu[0].p1)
 }, []);
 
   const priceMenu = [
@@ -368,7 +368,7 @@ function MyBook(props) {
     }
   ]
 
-
+  
    
    
    const [bookPages, setBookPages] = useState([
@@ -379,12 +379,13 @@ function MyBook(props) {
         // Kay Pages
           // <GSIPage3 header="KAY"/>,
           <GSIPage2 logo={kaylogo}/>,
-          <GSIPage3 header="KAY Natural Diamond Certification"/>,
+          <GSIPage3 header="KAY" header1="Natural Diamond Certification"/>,
           //Natural
           // <DefaultPageLayout header="KAY/Natural Diamond/21 - Bridal Reg" footer="6" content={<MDX frontImg={kay_natural_21_top} backImg={kay_natural_21_back}/>}/>,
           // <DefaultPageLayout2 header="Details" footer="+" content={<Details />}/>,
           // Testing 2/5/25
-          <DefaultPageLayout header="KAY/ Natural Diamond/ Bridal Regular/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-21-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={whitetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={kkt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          // KAY/ Natural Diamond/ Bridal Regular/ Full Certification
+          <DefaultPageLayout header='KAY/ Natural Diamond/ Bridal Regular/ Full Certification' footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-21-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={whitetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={kkt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
           <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
 
           <DefaultPageLayout header="KAY/ Natural Diamond/ Bridal Solitare/ Full Certification" footer="8" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-22-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={whitetag}  menuType={'false'} priceMenu={priceMenu[1]} frontImg={kay_natural_22_top} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
@@ -397,61 +398,62 @@ function MyBook(props) {
           <DefaultPageLayout header="KAY/ Natural Diamond/ Solitare Studs/ Full Certification" footer="12" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-25-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={rattail} menuType={'true'}  priceMenu={priceMenu[0]} frontImg={kkst} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
           <DefaultPageLayout2 header="Lab Validation Process" footer="13" content={<><Details2 />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Natural Diamond/ Solitare Pend/ Full Certification" footer="14" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-26-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kkpt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Solitare Pendants/ Full Certification" footer="14" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-26-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kkpt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
           <DefaultPageLayout2 header="Lab Validation Process" footer="15" content={<><Details2 />  </>}/>,
 
           // min
 
-          <DefaultPageLayout header="KAY/ Natural Diamond/ Anniversary/ Minimum Certification" footer="16" content={<MDX2 multiMDX={'false'} placePrice={'false'} pricetitle={"Natural Diamonds: "} label1={'$10.00 Flat Fee Report'} label2={''} label3={''}  subtitle={"K-NAT-34-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kanvtop} backImg={kanvback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          // <DefaultPageLayout header="KAY/ Natural Diamond/ Anniversary/ Minimum Certification" footer="16" content={<MDX2 multiMDX={'false'} placePrice={'false'} pricetitle={"Min. Grade Natural Diamond Certification: "} label1={'$10.00 flat fee'} label2={''} label3={''}  subtitle={"K-NAT-34-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kanvtop} backImg={kanvback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          // <DefaultPageLayout2 header="Lab Validation Process" footer="17" content={<><Details2 />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Anniversary/ Minimum Certification" footer="16" content={<MDX2 multiMDX={'false'} placePrice={'false'} pricetitle={"Min. Grade Natural Diamond Certification: "} label1={'$10.00 flat fee'} label2={''} label3={''}  subtitle={"K-NAT-34-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kanvtop} backImg={kanvback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
           <DefaultPageLayout2 header="Lab Validation Process" footer="17" content={<><Details2 />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Natural Diamond/ Anniversary/ Minimum Certification" footer="16" content={<MDX2 multiMDX={'false'} placePrice={'false'} pricetitle={"Natural Diamonds: "} label1={'$10.00 Flat Fee Report'} label2={''} label3={''}  subtitle={"K-NAT-34-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kanvtop} backImg={kanvback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="17" content={<><Details2 />  </>}/>,
-
-          <DefaultPageLayout header="KAY/ Natural Diamond/ Fashion/ Minimum Certification" footer="18" content={<MDX2 multiMDX={'false'} placePrice={'false'} pricetitle={"Natural Diamonds: "} label1={'$10.00 Flat Fee Report'} label2={''} label3={''}  subtitle={"K-NAT-35-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={knfashtop} backImg={knfashback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Fashion/ Minimum Certification" footer="18" content={<MDX2 multiMDX={'false'} placePrice={'false'} pricetitle={"Min. Grade Natural Diamond Certification: "} label1={'$10.00 flat fee'} label2={''} label3={''}  subtitle={"K-NAT-35-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={knfashtop} backImg={knfashback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
           <DefaultPageLayout2 header="Lab Validation Process" footer="19" content={<><Details2 />  </>}/>,
           
           
 
           //LCD
-          <GSIPage3 header="KAY" header1="Lab Created Diamond" header2="Certification"/>,
-          <GSIPage3 header="KAY" header1="Lab Created Diamond" header2="Certification"/>,
+          <GSIPage2 logo={kaylogo}/>,
+          <GSIPage3 header="KAY" header1="Lab Created Diamond Certification"/>,
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal Regular/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-21-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'} tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd21top} backImg={klcd21back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal Regular/ Full Certification" footer="22" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-21-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'}  label4={'$1.00 "LCD" only'} tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd21top} backImg={klcd21back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="23" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal Solitaire/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-22-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetag} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd22top} backImg={klcd22back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal Solitaire/ Full Certification" footer="24" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-22-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'}  label4={'$1.00 "LCD" only'}  tail={bluetag} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd22top} backImg={klcd22back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="25" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ 3 Stone Style/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-23-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd23top} backImg={klcd23back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ 3 Stone Style/ Full Certification" footer="26" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-23-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'}  label4={'$1.00 "LCD" only'}  tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd23top} backImg={klcd23back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="27" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ 2 Stone Style/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-24-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'} tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd24top} backImg={klcd24back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ 2 Stone Style/ Full Certification" footer="28" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-24-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'}  label4={'$1.00 "LCD" only'} tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd24top} backImg={klcd24back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="29" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Solitaire Studs/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-25-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'} tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd25top} backImg={klcd25back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Solitaire Studs/ Full Certification" footer="30" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-25-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'}  label4={'$1.00 "LCD" only'} tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd25top} backImg={klcd25back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="31" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Solitaire Pendant/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-26-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetag} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd26top} backImg={klcd26back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Solitaire Pendant/ Full Certification" footer="32" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-26-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'}  label4={'$1.00 "LCD" only'}  tail={bluetag} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd26top} backImg={klcd26back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="33" content={<><Details />  </>}/>,
 
           //min          
+          
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Anniversary/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'false'} placePrice={'false'} subtitle={"K-LCD-31-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd31top} backImg={klcd32back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal/ Minimum Certification" footer="34" content={<MDX2 multiMDX={'false'} placePrice={'false'} subtitle={"K-LCD-31-P"}   label1={'$3.50 flat fee'} label2={'Up to 6ct twt $3.50'} label3={'6ct twt and higher $7.00'} label4={'Laser Inscription Price:'} pricetitle={'Min. Grade Lab Created Diamond Certification'} label5={'$1.00 "LCD" only'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd31top} backImg={klcd32back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="35" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal Solitaire/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'false'} placePrice={'false'} subtitle={"K-LCD-32-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd32top} backImg={klcd32back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal Solitaire/ Minimum Certification" footer="36" content={<MDX2 multiMDX={'false'} placePrice={'false'} subtitle={"K-LCD-32-P"} label1={'$3.50 flat fee'} label2={'Up to 6ct twt $3.50'} label3={'6ct twt and higher $7.00'} label4={'Laser Inscription Price:'} pricetitle={'Min. Grade Lab Created Diamond Certification'} label5={'$1.00 "LCD" only'}  lab tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd32top} backImg={klcd32back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="37" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Solitaire Studs | Pendant/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'true'} placePrice={'false'} subtitle={"K-LCD-33-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd331top} backImg={klcd331back} frontImg2={klcd332top} backImg2={klcd332back} frontImg3={'blank'} backImg3={'blank'}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Solitaire Studs | Pendant/ Minimum Certification" footer="38" content={<MDX2 multiMDX={'true'} placePrice={'false'} subtitle={"K-LCD-33-P"}  label1={'$3.50 flat fee'} label2={'Up to 6ct twt $3.50'} label3={'6ct twt and higher $7.00'} label4={'Laser Inscription Price:'} pricetitle={'Min. Grade Lab Created Diamond Certification'} label5={'$1.00 "LCD" only'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd331top} backImg={klcd331back} frontImg2={klcd332top} backImg2={klcd332back} frontImg3={'blank'} backImg3={'blank'}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="39" content={<><Details />  </>}/>,
 
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Anniversary/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'false'} placePrice={'false'} subtitle={"K-LCD-34-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd34top} backImg={klcd34back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Anniversary/ Minimum Certification" footer="40" content={<MDX2 multiMDX={'false'} placePrice={'false'} subtitle={"K-LCD-34-P"} label1={'$3.50 flat fee'} label2={'Up to 6ct twt $3.50'} label3={'6ct twt and higher $7.00'} label4={'Laser Inscription Price:'} pricetitle={'Min. Grade Lab Created Diamond Certification'} label5={'$1.00 "LCD" only'} tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd34top} backImg={klcd34back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="41" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Fashion/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'true'} placePrice={'false'} subtitle={"K-LCD-35-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd351top} backImg={klcd351back} frontImg2={klcd352top} backImg2={klcd352back} frontImg3={klcd353top} backImg3={klcd353back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Fashion/ Minimum Certification" footer="42" content={<MDX2 multiMDX={'true'} placePrice={'false'} subtitle={"K-LCD-35-P"} label1={'$3.50 flat fee'} label2={'Up to 6ct twt $3.50'} label3={'6ct twt and higher $7.00'} label4={'Laser Inscription Price:'} pricetitle={'Min. Grade Lab Created Diamond Certification'} label5={'$1.00 "LCD" only'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd351top} backImg={klcd351back} frontImg2={klcd352top} backImg2={klcd352back} frontImg3={klcd353top} backImg3={klcd353back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="43" content={<><Details />  </>}/>,
 
 
 
@@ -465,116 +467,117 @@ function MyBook(props) {
           // <DefaultPageLayout header="KAY/Lab Created Diamond/34 - Anniversary | Fashion" footer="16" content={<MDX frontImg={kay_lcd_34_top} backImg={kay_lcd_34_back}/>}/>,
 
           //Ruby
-          <GSIPage3 header="KAY Ruby"/>,
-          <DefaultPageLayout header="KAY/Ruby/51 - Ruby Only" footer="18" content={<MDX frontImg={kay_51_top} backImg={back1}/>}/>,
-          <DefaultPageLayout header="KAY/Ruby/52 - Ruby + Natural Diamond" footer="19" content={<MDX frontImg={kay_52_top} backImg={kay_52_back}/>}/>,
+          <GSIPage2 logo={kaylogo}/>,
+          <GSIPage3 header="KAY" header1="Ruby Certification"/>,
+          <DefaultPageLayout header="KAY/Ruby/51 - Ruby Only" footer="46" content={<MDX frontImg={kay_51_top} backImg={back1}/>}/>,
+          <DefaultPageLayout header="KAY/Ruby/52 - Ruby + Natural Diamond" footer="47" content={<MDX frontImg={kay_52_top} backImg={kay_52_back}/>}/>,
 
           // Kay Outlet
-          <GSIPage3 header="KAY Outlet Natural"/>,
-           // Natural
-          <DefaultPageLayout header="KAY Outlet/Natural Diamond/21 - Bridal Reg" footer="21" content={<MDX frontImg={kayo_21_top} backImg={kayo_21_back}/>}/>,
-          <DefaultPageLayout header="KAY Outlet/Natural Diamond/22 - Bridal Solitaire" footer="22" content={<MDX frontImg={kayo_22_top} backImg={kayo_22_back}/>}/>,
-          <DefaultPageLayout header="KAY Outlet/Natural Diamond/25 - Solitaire Studs | Pendants" footer="23" content={<MDX frontImg={kayo_25_top} backImg={kayo_25_back}/>}/>,
-          <DefaultPageLayout header="KAY Outlet/Natural Diamond/34 - Anniversary | Fashion" footer="24" content={<MDX frontImg={kayo_34_top} backImg={kayo_34_back}/>}/>,
-          // LCD
-          <GSIPage3 header="KAY Outlet LCD"/>,
-          <DefaultPageLayout header="KAY Outlet/Lab Created Diamond/21 - Bridal Reg" footer="26" content={<MDX frontImg={kayo_lcd_21_top} backImg={kayo_lcd_21_back}/>}/>,
-          <DefaultPageLayout header="KAY Outlet/Lab Created Diamond/25 - Solitaire Studs | Pendants " footer="27" content={<MDX frontImg={kayo_lcd_25_top} backImg={kayo_lcd_25_back}/>}/>,
-          <DefaultPageLayout header="KAY Outlet/Lab Created Diamond/34 - Anniversary | Fashion" footer="28" content={<MDX frontImg={kayo_lcd_34_top} backImg={kayo_lcd_34_back}/>}/>,
+          // <GSIPage3 header="KAY Outlet Natural"/>,
+          //  // Natural
+          // <DefaultPageLayout header="KAY Outlet/Natural Diamond/21 - Bridal Reg" footer="21" content={<MDX frontImg={kayo_21_top} backImg={kayo_21_back}/>}/>,
+          // <DefaultPageLayout header="KAY Outlet/Natural Diamond/22 - Bridal Solitaire" footer="22" content={<MDX frontImg={kayo_22_top} backImg={kayo_22_back}/>}/>,
+          // <DefaultPageLayout header="KAY Outlet/Natural Diamond/25 - Solitaire Studs | Pendants" footer="23" content={<MDX frontImg={kayo_25_top} backImg={kayo_25_back}/>}/>,
+          // <DefaultPageLayout header="KAY Outlet/Natural Diamond/34 - Anniversary | Fashion" footer="24" content={<MDX frontImg={kayo_34_top} backImg={kayo_34_back}/>}/>,
+          // // LCD
+          // <GSIPage3 header="KAY Outlet LCD"/>,
+          // <DefaultPageLayout header="KAY Outlet/Lab Created Diamond/21 - Bridal Reg" footer="26" content={<MDX frontImg={kayo_lcd_21_top} backImg={kayo_lcd_21_back}/>}/>,
+          // <DefaultPageLayout header="KAY Outlet/Lab Created Diamond/25 - Solitaire Studs | Pendants " footer="27" content={<MDX frontImg={kayo_lcd_25_top} backImg={kayo_lcd_25_back}/>}/>,
+          // <DefaultPageLayout header="KAY Outlet/Lab Created Diamond/34 - Anniversary | Fashion" footer="28" content={<MDX frontImg={kayo_lcd_34_top} backImg={kayo_lcd_34_back}/>}/>,
 
-          //Ruby
-          <GSIPage3 header="KAY Outlet Ruby"/>,
-          <DefaultPageLayout header="KAY Outlet/Ruby/51 - Ruby Only" footer="30" content={<MDX frontImg={kayo_ruby_51_top} backImg={kayo_ruby_51_top}/>}/>,
-          <DefaultPageLayout header="KAY Outlet/Ruby/52 - Ruby + Natural Diamond" footer="31" content={<MDX frontImg={kayo_ruby_52_top} backImg={kayo_ruby_52_back}/>}/>,
+          // //Ruby
+          // <GSIPage3 header="KAY Outlet Ruby"/>,
+          // <DefaultPageLayout header="KAY Outlet/Ruby/51 - Ruby Only" footer="30" content={<MDX frontImg={kayo_ruby_51_top} backImg={kayo_ruby_51_top}/>}/>,
+          // <DefaultPageLayout header="KAY Outlet/Ruby/52 - Ruby + Natural Diamond" footer="31" content={<MDX frontImg={kayo_ruby_52_top} backImg={kayo_ruby_52_back}/>}/>,
         
         
-          // Jared
-          <GSIPage3 header="Jared Natural"/>,
-              // <DefaultPageLayout header="" footer="5" content={<MDX frontImg={} backImg={}/>}/>,
-              <DefaultPageLayout header="Jared/Natural Diamond/21 - Bridal Reg" footer="33" content={<MDX frontImg={j_n_21_top} backImg={j_n_21_back}/>}/>,
-              <DefaultPageLayout header="Jared/Natural Diamond/22 - Bridal Solitaire" footer="34" content={<MDX frontImg={j_n_22_top} backImg={j_n_22_back}/>}/>,
-              <DefaultPageLayout header="Jared/Natural Diamond/25 - Solitaire Studs | Pendants" footer="35" content={<MDX frontImg={j_n_25_top} backImg={j_n_25_back}/>}/>,
-              <DefaultPageLayout header="Jared/Natural Diamond/34 - Anniversary | Fashion" footer="36" content={<MDX frontImg={j_n_34_top} backImg={j_n_34_back}/>}/>,
-          <GSIPage3 header="Jared LCD"/>,
-              <DefaultPageLayout header="Jared/Lab Created Diamond/21 - Bridal Reg" footer="38" content={<MDX frontImg={j_l_21_top} backImg={j_l_21_back}/>}/>,
-              <DefaultPageLayout header="Jared/Lab Created Diamond/31 - Bridal CTR-CTW" footer="39" content={<MDX frontImg={j_l_31_top} backImg={j_l_31_back}/>}/>,
-              <DefaultPageLayout header="Jared/Lab Created Diamond/34 - Anniversary | Fashion" footer="40" content={<MDX frontImg={j_l_34_top} backImg={j_l_34_back}/>}/>,
-          <GSIPage3 header="Jared Ruby"/>,
-              <DefaultPageLayout header="Jared/Ruby/51 - Ruby Only" footer="42" content={<MDX frontImg={kayo_ruby_51_top} backImg={kayo_ruby_51_top}/>}/>,
-              <DefaultPageLayout header="Jared/Ruby/52 - Ruby + Natural Diamond" footer="43" content={<MDX frontImg={kayo_ruby_52_top} backImg={kayo_ruby_52_back}/>}/>,
+          // // Jared
+          // <GSIPage3 header="Jared Natural"/>,
+          //     // <DefaultPageLayout header="" footer="5" content={<MDX frontImg={} backImg={}/>}/>,
+          //     <DefaultPageLayout header="Jared/Natural Diamond/21 - Bridal Reg" footer="33" content={<MDX frontImg={j_n_21_top} backImg={j_n_21_back}/>}/>,
+          //     <DefaultPageLayout header="Jared/Natural Diamond/22 - Bridal Solitaire" footer="34" content={<MDX frontImg={j_n_22_top} backImg={j_n_22_back}/>}/>,
+          //     <DefaultPageLayout header="Jared/Natural Diamond/25 - Solitaire Studs | Pendants" footer="35" content={<MDX frontImg={j_n_25_top} backImg={j_n_25_back}/>}/>,
+          //     <DefaultPageLayout header="Jared/Natural Diamond/34 - Anniversary | Fashion" footer="36" content={<MDX frontImg={j_n_34_top} backImg={j_n_34_back}/>}/>,
+          // <GSIPage3 header="Jared LCD"/>,
+          //     <DefaultPageLayout header="Jared/Lab Created Diamond/21 - Bridal Reg" footer="38" content={<MDX frontImg={j_l_21_top} backImg={j_l_21_back}/>}/>,
+          //     <DefaultPageLayout header="Jared/Lab Created Diamond/31 - Bridal CTR-CTW" footer="39" content={<MDX frontImg={j_l_31_top} backImg={j_l_31_back}/>}/>,
+          //     <DefaultPageLayout header="Jared/Lab Created Diamond/34 - Anniversary | Fashion" footer="40" content={<MDX frontImg={j_l_34_top} backImg={j_l_34_back}/>}/>,
+          // <GSIPage3 header="Jared Ruby"/>,
+          //     <DefaultPageLayout header="Jared/Ruby/51 - Ruby Only" footer="42" content={<MDX frontImg={kayo_ruby_51_top} backImg={kayo_ruby_51_top}/>}/>,
+          //     <DefaultPageLayout header="Jared/Ruby/52 - Ruby + Natural Diamond" footer="43" content={<MDX frontImg={kayo_ruby_52_top} backImg={kayo_ruby_52_back}/>}/>,
 
-          // Jared Vault
-          <GSIPage3 header="Jared Vault Natural"/>,
-              <DefaultPageLayout header="Jared Vault/Natural Diamond/25 - Solitaire Studs | Pendants" footer="45" content={<MDX frontImg={jo_n_25_top} backImg={jo_n_25_back}/>}/>,
-          <GSIPage3 header="Jared Vault LCD"/>,
-              <DefaultPageLayout header="Jared Vault/Lab Created Diamond/21 - Bridal Reg" footer="47" content={<MDX frontImg={jo_l_21_top} backImg={jo_l_21_back}/>}/>,
-          <GSIPage3 header="Jared Vault Ruby"/>,
-              <DefaultPageLayout header="Jared Vault/Ruby/51 - Ruby Only" footer="49" content={<MDX frontImg={kayo_ruby_51_top} backImg={kayo_ruby_51_top}/>}/>,
-              <DefaultPageLayout header="Jared Vault/Ruby/52 - Ruby + Natural Diamond" footer="50" content={<MDX frontImg={kayo_ruby_52_top} backImg={kayo_ruby_52_back}/>}/>,
+          // // Jared Vault
+          // <GSIPage3 header="Jared Vault Natural"/>,
+          //     <DefaultPageLayout header="Jared Vault/Natural Diamond/25 - Solitaire Studs | Pendants" footer="45" content={<MDX frontImg={jo_n_25_top} backImg={jo_n_25_back}/>}/>,
+          // <GSIPage3 header="Jared Vault LCD"/>,
+          //     <DefaultPageLayout header="Jared Vault/Lab Created Diamond/21 - Bridal Reg" footer="47" content={<MDX frontImg={jo_l_21_top} backImg={jo_l_21_back}/>}/>,
+          // <GSIPage3 header="Jared Vault Ruby"/>,
+          //     <DefaultPageLayout header="Jared Vault/Ruby/51 - Ruby Only" footer="49" content={<MDX frontImg={kayo_ruby_51_top} backImg={kayo_ruby_51_top}/>}/>,
+          //     <DefaultPageLayout header="Jared Vault/Ruby/52 - Ruby + Natural Diamond" footer="50" content={<MDX frontImg={kayo_ruby_52_top} backImg={kayo_ruby_52_back}/>}/>,
           
-          // Peoples
-          // Peoples Nat
-          <GSIPage3 header="Peoples Natural"/>,
-          <DefaultPageLayout header="Peoples/Natural Diamond/21 - Bridal Reg" footer="52" content={<MDX frontImg={p_n_21_top} backImg={p_n_21_back}/>}/>,
-          <DefaultPageLayout header="Peoples/Natural Diamond/22 - Bridal Solitaire" footer="53" content={<MDX frontImg={p_n_22_top} backImg={p_n_22_back}/>}/>,
-          <DefaultPageLayout header="Peoples/Natural Diamond/23 - 3 Stone Styles" footer="54" content={<MDX frontImg={p_n_23_top} backImg={p_n_23_back}/>}/>,
-          <DefaultPageLayout header="Peoples/Natural Diamond/25 - Solitaire Studs | Pendants" footer="55" content={<MDX frontImg={p_n_25_top} backImg={p_n_25_back}/>}/>,
-          <DefaultPageLayout header="Peoples/Natural Diamond/26 - Anniversary" footer="56" content={<MDX frontImg={p_n_26_top} backImg={p_n_26_back}/>}/>,
-          <DefaultPageLayout header="Peoples/Natural Diamond/27 - Fashion" footer="57" content={<MDX frontImg={p_n_27_top} backImg={p_n_27_back}/>}/>,
-          // Peoples LCD
-          <GSIPage3 header="Peoples LCD"/>,
-          <DefaultPageLayout header="Peoples/Lab Created Diamond/31 - Bridal CTR-CTW" footer="59" content={<MDX frontImg={p_l_31_top} backImg={p_l_31_back}/>}/>,
-          <DefaultPageLayout header="Peoples/Lab Created Diamond/34 - Anniversary | Fashion" footer="60" content={<MDX frontImg={p_l_34_top} backImg={p_l_34_top}/>}/>,
+          // // Peoples
+          // // Peoples Nat
+          // <GSIPage3 header="Peoples Natural"/>,
+          // <DefaultPageLayout header="Peoples/Natural Diamond/21 - Bridal Reg" footer="52" content={<MDX frontImg={p_n_21_top} backImg={p_n_21_back}/>}/>,
+          // <DefaultPageLayout header="Peoples/Natural Diamond/22 - Bridal Solitaire" footer="53" content={<MDX frontImg={p_n_22_top} backImg={p_n_22_back}/>}/>,
+          // <DefaultPageLayout header="Peoples/Natural Diamond/23 - 3 Stone Styles" footer="54" content={<MDX frontImg={p_n_23_top} backImg={p_n_23_back}/>}/>,
+          // <DefaultPageLayout header="Peoples/Natural Diamond/25 - Solitaire Studs | Pendants" footer="55" content={<MDX frontImg={p_n_25_top} backImg={p_n_25_back}/>}/>,
+          // <DefaultPageLayout header="Peoples/Natural Diamond/26 - Anniversary" footer="56" content={<MDX frontImg={p_n_26_top} backImg={p_n_26_back}/>}/>,
+          // <DefaultPageLayout header="Peoples/Natural Diamond/27 - Fashion" footer="57" content={<MDX frontImg={p_n_27_top} backImg={p_n_27_back}/>}/>,
+          // // Peoples LCD
+          // <GSIPage3 header="Peoples LCD"/>,
+          // <DefaultPageLayout header="Peoples/Lab Created Diamond/31 - Bridal CTR-CTW" footer="59" content={<MDX frontImg={p_l_31_top} backImg={p_l_31_back}/>}/>,
+          // <DefaultPageLayout header="Peoples/Lab Created Diamond/34 - Anniversary | Fashion" footer="60" content={<MDX frontImg={p_l_34_top} backImg={p_l_34_top}/>}/>,
 
-          // Peoples Ruby
-          <GSIPage3 header="Peoples Ruby"/>,
-          <DefaultPageLayout header="Peoples/Ruby/51 - Ruby Only" footer="62" content={<MDX frontImg={p_r_51_top} backImg={p_r_51_back}/>}/>,
-          <DefaultPageLayout header="Peoples/Ruby/54 - Ruby + Natural Diamond" footer="63" content={<MDX frontImg={p_r_54_top} backImg={p_r_54_top}/>}/>,
+          // // Peoples Ruby
+          // <GSIPage3 header="Peoples Ruby"/>,
+          // <DefaultPageLayout header="Peoples/Ruby/51 - Ruby Only" footer="62" content={<MDX frontImg={p_r_51_top} backImg={p_r_51_back}/>}/>,
+          // <DefaultPageLayout header="Peoples/Ruby/54 - Ruby + Natural Diamond" footer="63" content={<MDX frontImg={p_r_54_top} backImg={p_r_54_top}/>}/>,
 
-          // Zales
-          // Zales Nat
-          <GSIPage3 header="Zales Natural"/>,
-          <DefaultPageLayout header="Zales/Natural Diamond/21 - Bridal Reg" footer="65" content={<MDX frontImg={z_n_21_top} backImg={z_n_21_back}/>}/>,
-          <DefaultPageLayout header="Zales/Natural Diamond/22 - Bridal Solitaire" footer="66" content={<MDX frontImg={z_n_22_top} backImg={z_n_22_back}/>}/>,
-          <DefaultPageLayout header="Zales/Natural Diamond/23 - 3 Stone Style" footer="67" content={<MDX frontImg={z_n_23_top} backImg={z_n_23_back}/>}/>,
-          <DefaultPageLayout header="Zales/Natural Diamond/25 - Solitaire Studs | Pendants" footer="68" content={<MDX frontImg={z_n_25_top} backImg={z_n_25_back}/>}/>,
-          <DefaultPageLayout header="Zales/Natural Diamond/26 - Anniversary" footer="69" content={<MDX frontImg={z_n_26_top} backImg={z_n_26_top}/>}/>,
-          <DefaultPageLayout header="Zales/Natural Diamond/27 - Fashion" footer="70" content={<MDX frontImg={z_n_27_top} backImg={z_n_27_back}/>}/>,
-          <DefaultPageLayout header="Zales/Natural Diamond/28 - Color Diamond" footer="71" content={<MDX frontImg={z_n_28_top} backImg={z_n_28_back}/>}/>,
+          // // Zales
+          // // Zales Nat
+          // <GSIPage3 header="Zales Natural"/>,
+          // <DefaultPageLayout header="Zales/Natural Diamond/21 - Bridal Reg" footer="65" content={<MDX frontImg={z_n_21_top} backImg={z_n_21_back}/>}/>,
+          // <DefaultPageLayout header="Zales/Natural Diamond/22 - Bridal Solitaire" footer="66" content={<MDX frontImg={z_n_22_top} backImg={z_n_22_back}/>}/>,
+          // <DefaultPageLayout header="Zales/Natural Diamond/23 - 3 Stone Style" footer="67" content={<MDX frontImg={z_n_23_top} backImg={z_n_23_back}/>}/>,
+          // <DefaultPageLayout header="Zales/Natural Diamond/25 - Solitaire Studs | Pendants" footer="68" content={<MDX frontImg={z_n_25_top} backImg={z_n_25_back}/>}/>,
+          // <DefaultPageLayout header="Zales/Natural Diamond/26 - Anniversary" footer="69" content={<MDX frontImg={z_n_26_top} backImg={z_n_26_top}/>}/>,
+          // <DefaultPageLayout header="Zales/Natural Diamond/27 - Fashion" footer="70" content={<MDX frontImg={z_n_27_top} backImg={z_n_27_back}/>}/>,
+          // <DefaultPageLayout header="Zales/Natural Diamond/28 - Color Diamond" footer="71" content={<MDX frontImg={z_n_28_top} backImg={z_n_28_back}/>}/>,
 
           
-          // Zales LCd
-          <GSIPage3 header="Zales LCD"/>,
-          <DefaultPageLayout header="Zales/Lab Creatd Diamond/21 - Bridal Reg" footer="73" content={<MDX frontImg={z_l_21_top} backImg={z_l_21_top}/>}/>,
-          <DefaultPageLayout header="Zales/Lab Creatd Diamond/22 - Bridal Solitaire" footer="74" content={<MDX frontImg={z_l_22_top} backImg={z_l_22_top}/>}/>,
-          <DefaultPageLayout header="Zales/Lab Creatd Diamond/23 - 3 Stone Style" footer="75" content={<MDX frontImg={z_l_23_top} backImg={z_l_23_back}/>}/>,
-          <DefaultPageLayout header="Zales/Lab Creatd Diamond/24 - 2 Stone Style" footer="76" content={<MDX frontImg={z_l_24_top} backImg={z_l_24_back}/>}/>,
-          <DefaultPageLayout header="Zales/Lab Creatd Diamond/25 - Solitaire Studs | Pendants" footer="77" content={<MDX frontImg={z_l_25_top} backImg={z_l_25_top}/>}/>,
-          <DefaultPageLayout header="Zales/Lab Creatd Diamond/31 - Bridal CTR-CTW" footer="78" content={<MDX frontImg={z_l_31_top} backImg={z_l_31_back}/>}/>,
-          <DefaultPageLayout header="Zales/Lab Creatd Diamond/34 - Anniversary | Fashion" footer="79" content={<MDX frontImg={z_l_34_top} backImg={z_l_34_top}/>}/>,
+          // // Zales LCd
+          // <GSIPage3 header="Zales LCD"/>,
+          // <DefaultPageLayout header="Zales/Lab Creatd Diamond/21 - Bridal Reg" footer="73" content={<MDX frontImg={z_l_21_top} backImg={z_l_21_top}/>}/>,
+          // <DefaultPageLayout header="Zales/Lab Creatd Diamond/22 - Bridal Solitaire" footer="74" content={<MDX frontImg={z_l_22_top} backImg={z_l_22_top}/>}/>,
+          // <DefaultPageLayout header="Zales/Lab Creatd Diamond/23 - 3 Stone Style" footer="75" content={<MDX frontImg={z_l_23_top} backImg={z_l_23_back}/>}/>,
+          // <DefaultPageLayout header="Zales/Lab Creatd Diamond/24 - 2 Stone Style" footer="76" content={<MDX frontImg={z_l_24_top} backImg={z_l_24_back}/>}/>,
+          // <DefaultPageLayout header="Zales/Lab Creatd Diamond/25 - Solitaire Studs | Pendants" footer="77" content={<MDX frontImg={z_l_25_top} backImg={z_l_25_top}/>}/>,
+          // <DefaultPageLayout header="Zales/Lab Creatd Diamond/31 - Bridal CTR-CTW" footer="78" content={<MDX frontImg={z_l_31_top} backImg={z_l_31_back}/>}/>,
+          // <DefaultPageLayout header="Zales/Lab Creatd Diamond/34 - Anniversary | Fashion" footer="79" content={<MDX frontImg={z_l_34_top} backImg={z_l_34_top}/>}/>,
 
-          // Zales Ruby
-          <GSIPage3 header="Zales Ruby"/>,
-          <DefaultPageLayout header="Zales/Ruby/51 - Ruby Only" footer="81" content={<MDX frontImg={kayo_ruby_51_top} backImg={kayo_ruby_51_top}/>}/>,
-          <DefaultPageLayout header="Zales/Ruby/52 - Ruby + Natural Diamond" footer="82" content={<MDX frontImg={z_r_52_top} backImg={z_r_52_back}/>}/>,
-
-
-          // Zales Outlet
-          // Zales Outlet Nat
-          <GSIPage3 header="Zales Outlet Natural"/>,
-          <DefaultPageLayout header="Zales Outlet/Natural Diamond/22 - Bridal Solitaire" footer="84" content={<MDX frontImg={zo_n_22_top} backImg={zo_n_22_back}/>}/>,
-          <DefaultPageLayout header="Zales Outlet/Natural Diamond/Solitaire Studs | Pendants" footer="85" content={<MDX frontImg={zo_n_25_top} backImg={zo_n_25_back}/>}/>,
+          // // Zales Ruby
+          // <GSIPage3 header="Zales Ruby"/>,
+          // <DefaultPageLayout header="Zales/Ruby/51 - Ruby Only" footer="81" content={<MDX frontImg={kayo_ruby_51_top} backImg={kayo_ruby_51_top}/>}/>,
+          // <DefaultPageLayout header="Zales/Ruby/52 - Ruby + Natural Diamond" footer="82" content={<MDX frontImg={z_r_52_top} backImg={z_r_52_back}/>}/>,
 
 
-          // Zales Outlet LCd
-          <GSIPage3 header="Zales Outlet LCD"/>,
-          <DefaultPageLayout header="Zales Outlet/Lab Created Diamond/21 - Bridal Reg" footer="87" content={<MDX frontImg={zo_l_21_top} backImg={zo_l_21_top}/>}/>,
+          // // Zales Outlet
+          // // Zales Outlet Nat
+          // <GSIPage3 header="Zales Outlet Natural"/>,
+          // <DefaultPageLayout header="Zales Outlet/Natural Diamond/22 - Bridal Solitaire" footer="84" content={<MDX frontImg={zo_n_22_top} backImg={zo_n_22_back}/>}/>,
+          // <DefaultPageLayout header="Zales Outlet/Natural Diamond/Solitaire Studs | Pendants" footer="85" content={<MDX frontImg={zo_n_25_top} backImg={zo_n_25_back}/>}/>,
 
 
-          // Zales Outlet Ruby
-          <GSIPage3 header="Zales Outlet Ruby"/>,
-          <DefaultPageLayout header="Zales Outlet/Ruby/51 - Ruby Only" footer="89" content={<MDX frontImg={zo_r_51_top} backImg={zo_r_51_top}/>}/>,
-          <DefaultPageLayout header="Zales Outlet/Ruby/52 - Ruby + Natural Diamond" footer="90" content={<MDX frontImg={zo_r_52_top} backImg={zo_r_52_back}/>}/>,
+          // // Zales Outlet LCd
+          // <GSIPage3 header="Zales Outlet LCD"/>,
+          // <DefaultPageLayout header="Zales Outlet/Lab Created Diamond/21 - Bridal Reg" footer="87" content={<MDX frontImg={zo_l_21_top} backImg={zo_l_21_top}/>}/>,
+
+
+          // // Zales Outlet Ruby
+          // <GSIPage3 header="Zales Outlet Ruby"/>,
+          // <DefaultPageLayout header="Zales Outlet/Ruby/51 - Ruby Only" footer="89" content={<MDX frontImg={zo_r_51_top} backImg={zo_r_51_top}/>}/>,
+          // <DefaultPageLayout header="Zales Outlet/Ruby/52 - Ruby + Natural Diamond" footer="90" content={<MDX frontImg={zo_r_52_top} backImg={zo_r_52_back}/>}/>,
 
       
               
@@ -582,7 +585,7 @@ function MyBook(props) {
 
 
 
-        <DefaultPageLayout header="End Of Book" footer="91"/>,
+        <DefaultPageLayout header="End Of Book" footer="48"/>,
         
    ])
    
