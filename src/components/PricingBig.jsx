@@ -4,7 +4,7 @@ import '../styles/pricing.css'
 const PricingBig = (props) => {
   return (
     <div>
-        <table>
+        <table style={{fontSize: '12px'}}>
             <tr>
                 <th>Weight</th>
                 <th>GSI Cert Price</th>
@@ -73,11 +73,20 @@ const PricingBig = (props) => {
             </tr>
         </table>
 
-        <section style={{marginTop: '10px', display:'flex', flexDirection: 'column'}}>
-            <a>Laser Inscription Price:</a>
+        <section style={{marginTop: '10px', display:'flex', flexDirection: 'column', fontSize: '15px'}}>
+            {/* <a>Laser Inscription Price:</a>
             <a >$5.00 Per Stone</a>
             <a >$9.00 Studs / 2 Stone</a>
-            <a style={{marginLeft:'px'}}>$13.00 3 Stone</a>
+            <a style={{marginLeft:'px'}}>$13.00 3 Stone</a> */}
+            <a>{props.pricetitle}</a>
+            <a >{props.label1}</a>
+            <a >{props.label2}</a>
+            <a style={{marginLeft:'px'}}>{props.label3}</a>
+            <a >{props.label4}</a>
+            <a >{props.label5}</a>
+            <a >{props.label6}</a>
+            <a >{props.label7}</a>
+            <a >{props.label8}</a>
             {/* <a style={{marginLeft:'10px'}}>$9.00 studs</a>
             <a style={{marginLeft:'10px'}}>$13.00 three stone</a> */}
             

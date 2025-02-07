@@ -9,6 +9,8 @@ const GSIPage3 = React.forwardRef((props, ref) => {
         <div className="page-content" >
           <div className="center-title-txt" >
             <h2>{props.header}</h2>
+            <h2>{props.header1}</h2>
+            <h2>{props.header2}</h2>
           </div>
         </div>
     </div>

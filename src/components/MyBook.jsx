@@ -252,10 +252,64 @@ import kkpt from '../../public/assets/booklet/Kay/Natural/kkpt.png'
 import whitetag from '../../public/assets/a.png'
 import rattail from '../../public/assets/rattail.png'
 
+import bluetag from '../../public/assets/bluetag.png'
+import bluetail from '../../public/assets/bluetail.png'
+
 import Details from './Details'
 import Details2 from './Details2'
 
 import kaylogo from '../../public/assets/kay.png'
+
+import kanvtop from '../../public/assets/booklet/Kay/natural/k-anv-top.png'
+import kanvback from '../../public/assets/booklet/Kay/natural/k-anv-back.png'
+
+import kn3stonetop from '../../public/assets/booklet/Kay/natural/kn3stone-top.png'
+import kn3stoneback from '../../public/assets/booklet/Kay/natural/kn3stone-back.png'
+
+import knfashtop from '../../public/assets/booklet/Kay/natural/k-nfash-top.png'
+import knfashback from '../../public/assets/booklet/Kay/natural/k-nfash-back.png'
+
+/////////////////////////////////////////////////////////////////////////////////
+
+import klcd21top from '../../public/assets/booklet/Kay/lcd/klcd21top.png'
+import klcd21back from '../../public/assets/booklet/Kay/lcd/klcd21back.png'
+
+import klcd22top from '../../public/assets/booklet/Kay/lcd/klcd22top.png'
+import klcd22back from '../../public/assets/booklet/Kay/lcd/klcd22back.png'
+
+import klcd23top from '../../public/assets/booklet/Kay/lcd/klcd23top.png'
+import klcd23back from '../../public/assets/booklet/Kay/lcd/klcd23back.png'
+
+import klcd24top from '../../public/assets/booklet/Kay/lcd/klcd24top.png'
+import klcd24back from '../../public/assets/booklet/Kay/lcd/klcd24back.png'
+
+import klcd25top from '../../public/assets/booklet/Kay/lcd/klcd25top.png'
+import klcd25back from '../../public/assets/booklet/Kay/lcd/klcd25back.png'
+
+import klcd26top from '../../public/assets/booklet/Kay/lcd/klcd26top.png'
+import klcd26back from '../../public/assets/booklet/Kay/lcd/klcd26back.png'
+
+import klcd31top from '../../public/assets/booklet/Kay/lcd/klcd31top.png'
+
+import klcd32top from '../../public/assets/booklet/Kay/lcd/klcd32top.png'
+import klcd32back from '../../public/assets/booklet/Kay/lcd/klcd32back.png'
+
+import klcd331top from '../../public/assets/booklet/Kay/LCD/klcd331top.png'
+import klcd331back from '../../public/assets/booklet/Kay/LCD/klcd331back.png'
+import klcd332top from '../../public/assets/booklet/Kay/LCD/klcd353top.png'
+import klcd332back from '../../public/assets/booklet/Kay/LCD/klcd353back.png'
+
+import klcd34top from '../../public/assets/booklet/Kay/lcd/klcd34top.png'
+import klcd34back from '../../public/assets/booklet/Kay/lcd/klcd34back.png'
+
+import klcd351top from '../../public/assets/booklet/Kay/LCD/klcd351top.png'
+import klcd351back from '../../public/assets/booklet/Kay/LCD/klcd351back.png'
+import klcd352top from '../../public/assets/booklet/Kay/LCD/klcd352top.png'
+import klcd352back from '../../public/assets/booklet/Kay/LCD/klcd352back.png'
+import klcd353top from '../../public/assets/booklet/Kay/LCD/klcd353top.png'
+import klcd353back from '../../public/assets/booklet/Kay/LCD/klcd353back.png'
+
+
 
 function MyBook(props) {
    const bookRef = useRef()
@@ -325,36 +379,90 @@ function MyBook(props) {
         // Kay Pages
           // <GSIPage3 header="KAY"/>,
           <GSIPage2 logo={kaylogo}/>,
-          <GSIPage3 header="KAY Natural"/>,
+          <GSIPage3 header="KAY Natural Diamond Certification"/>,
           //Natural
           // <DefaultPageLayout header="KAY/Natural Diamond/21 - Bridal Reg" footer="6" content={<MDX frontImg={kay_natural_21_top} backImg={kay_natural_21_back}/>}/>,
           // <DefaultPageLayout2 header="Details" footer="+" content={<Details />}/>,
           // Testing 2/5/25
-          <DefaultPageLayout header="KAY/ Natural Diamond/ Bridal Regular/ Full Certification" footer="6" content={<MDX2 subtitle={"K-NAT-21-P"} tail={whitetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={kkt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Bridal Regular/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-21-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={whitetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={kkt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
           <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Natural Diamond/ Bridal Solitare/ Full Certification" footer="8" content={<MDX2 subtitle={"K-NAT-22-P"} tail={whitetag}  menuType={'false'} priceMenu={priceMenu[1]} frontImg={kay_natural_22_top} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Bridal Solitare/ Full Certification" footer="8" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-22-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={whitetag}  menuType={'false'} priceMenu={priceMenu[1]} frontImg={kay_natural_22_top} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
           <DefaultPageLayout2 header="Lab Validation Process" footer="9" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Natural Diamond/ Solitare Studs/ Full Certification" footer="10" content={<MDX2 subtitle={"K-NAT-25-P"} tail={rattail} menuType={'true'}  priceMenu={priceMenu[0]} frontImg={kkst} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout2 header="Lab Validation Process" footer="11" content={<><Details2 />  </>}/>,
+          <DefaultPageLayout header="KAY/ Natural Diamond/ 3 Stone Style/ Full Certification" footer="10" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-23-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={whitetag}  menuType={'true'} priceMenu={priceMenu[0]} frontImg={kn3stonetop} backImg={kn3stoneback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="11" content={<><Details />  </>}/>,
 
-          <DefaultPageLayout header="KAY/ Natural Diamond/ Solitare Pend/ Full Certification" footer="12" content={<MDX2 subtitle={"K-NAT-26-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kkpt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Solitare Studs/ Full Certification" footer="12" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-25-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={rattail} menuType={'true'}  priceMenu={priceMenu[0]} frontImg={kkst} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
           <DefaultPageLayout2 header="Lab Validation Process" footer="13" content={<><Details2 />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Solitare Pend/ Full Certification" footer="14" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-26-P"} pricetitle={"Laser Inscription Price:"} label1={'$5.00 Per Stone'} label2={'$9.00 Studs / 2 Stone'} label3={'$13.00 3 Stone'} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kkpt} backImg={kkb} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="15" content={<><Details2 />  </>}/>,
+
+          // min
+
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Anniversary/ Minimum Certification" footer="16" content={<MDX2 multiMDX={'false'} placePrice={'false'} pricetitle={"Natural Diamonds: "} label1={'$10.00 Flat Fee Report'} label2={''} label3={''}  subtitle={"K-NAT-34-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kanvtop} backImg={kanvback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="17" content={<><Details2 />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Anniversary/ Minimum Certification" footer="16" content={<MDX2 multiMDX={'false'} placePrice={'false'} pricetitle={"Natural Diamonds: "} label1={'$10.00 Flat Fee Report'} label2={''} label3={''}  subtitle={"K-NAT-34-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={kanvtop} backImg={kanvback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="17" content={<><Details2 />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Natural Diamond/ Fashion/ Minimum Certification" footer="18" content={<MDX2 multiMDX={'false'} placePrice={'false'} pricetitle={"Natural Diamonds: "} label1={'$10.00 Flat Fee Report'} label2={''} label3={''}  subtitle={"K-NAT-35-P"} tail={rattail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={knfashtop} backImg={knfashback} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="19" content={<><Details2 />  </>}/>,
           
-          // <DefaultPageLayout header="KAY/Natural Diamond/22 - Bridal Solitaire" footer="6" content={<MDX frontImg={kay_natural_22_top} backImg={kay_natural_22_back}/>}/>,
-          // <DefaultPageLayout header="KAY/Natural Diamond/25 - Solitaire Studs | Pendants" footer="7" content={<MDX frontImg={kay_natural_25_top} backImg={kay_natural_25_back}/>}/>,
-          <DefaultPageLayout header="KAY/Natural Diamond/34 - Anniversary | Fashion" footer="13" content={<MDX frontImg={kay_natural_34_top} backImg={kay_natural_34_back}/>}/>,
+          
 
           //LCD
-          <GSIPage3 header="KAY LCD"/>,
-          <DefaultPageLayout header="KAY/Lab Created Diamond/21 - Bridal Reg" footer="10" content={<MDX frontImg={kay_lcd_21_top} backImg={kay_lcd_21_back}/>}/>,
-          <DefaultPageLayout header="KAY/Lab Created Diamond/23 - 3 Stone Style" footer="11" content={<MDX frontImg={kay_lcd_23_top} backImg={kay_lcd_23_back}/>}/>,
-          <DefaultPageLayout header="KAY/Lab Created Diamond/24 - 2 Stone Style" footer="12" content={<MDX frontImg={kay_lcd_24_top} backImg={kay_lcd_24_back}/>}/>,
-          <DefaultPageLayout header="KAY/Lab Created Diamond/25 - Solitaire Studs | Pendants " footer="13" content={<MDX frontImg={kay_lcd_25_top} backImg={kay_lcd_25_back}/>}/>,
-          <DefaultPageLayout header="KAY/Lab Created Diamond/31 - Bridal CTR-CTW" footer="14" content={<MDX frontImg={kay_lcd_31_top} backImg={kay_lcd_31_back}/>}/>,
-          <DefaultPageLayout header="KAY/Lab Created Diamond/33 - Solitaire Studs | Pendants" footer="15" content={<MDX frontImg={kay_lcd_33_top} backImg={kay_lcd_33_back}/>}/>,
-          <DefaultPageLayout header="KAY/Lab Created Diamond/34 - Anniversary | Fashion" footer="16" content={<MDX frontImg={kay_lcd_34_top} backImg={kay_lcd_34_back}/>}/>,
+          <GSIPage3 header="KAY" header1="Lab Created Diamond" header2="Certification"/>,
+          <GSIPage3 header="KAY" header1="Lab Created Diamond" header2="Certification"/>,
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal Regular/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-21-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'} tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd21top} backImg={klcd21back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal Solitaire/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-22-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetag} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd22top} backImg={klcd22back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ 3 Stone Style/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-23-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd23top} backImg={klcd23back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ 2 Stone Style/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-24-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'} tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd24top} backImg={klcd24back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Solitaire Studs/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-25-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'} tail={bluetag} menuType={'true'} priceMenu={priceMenu[0]} frontImg={klcd25top} backImg={klcd25back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Solitaire Pendant/ Full Certification" footer="6" content={<MDX2 multiMDX={'false'} subtitle={"K-LCD-26-P"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetag} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd26top} backImg={klcd26back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+          //min          
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Anniversary/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'false'} placePrice={'false'} subtitle={"K-LCD-31-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd31top} backImg={klcd32back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Bridal Solitaire/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'false'} placePrice={'false'} subtitle={"K-LCD-32-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd32top} backImg={klcd32back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Solitaire Studs | Pendant/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'true'} placePrice={'false'} subtitle={"K-LCD-33-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd331top} backImg={klcd331back} frontImg2={klcd332top} backImg2={klcd332back} frontImg3={'blank'} backImg3={'blank'}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Anniversary/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'false'} placePrice={'false'} subtitle={"K-LCD-34-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd34top} backImg={klcd34back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} frontImg3={kay_natural_25_top} backImg3={kay_natural_25_back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+          <DefaultPageLayout header="KAY/ Lab Created Diamond/ Fashion/ Minimum Certification" footer="6" content={<MDX2 multiMDX={'true'} placePrice={'false'} subtitle={"K-LCD-35-P"} label6={"Up to 6ct twt $3.50"} label7={"6ct twt and higher $7.00"} label1={"Laser Inscription Price:"} label2={'$5.00 Per Stone'} label3={'$9.00 Studs / 2 Stone'} label4={'$13.00 3 Stone'} pricetitle={'$3.50 Cert'} label5={'$1.00 LCD Laser'}  tail={bluetail} menuType={'false'} priceMenu={priceMenu[1]} frontImg={klcd351top} backImg={klcd351back} frontImg2={klcd352top} backImg2={klcd352back} frontImg3={klcd353top} backImg3={klcd353back}/>}/>,
+          <DefaultPageLayout2 header="Lab Validation Process" footer="7" content={<><Details />  </>}/>,
+
+
+
+
+          // <DefaultPageLayout header="KAY/Lab Created Diamond/21 - Bridal Reg" footer="10" content={<MDX frontImg={kay_lcd_21_top} backImg={kay_lcd_21_back}/>}/>,
+          // <DefaultPageLayout header="KAY/Lab Created Diamond/23 - 3 Stone Style" footer="11" content={<MDX frontImg={kay_lcd_23_top} backImg={kay_lcd_23_back}/>}/>,
+          // <DefaultPageLayout header="KAY/Lab Created Diamond/24 - 2 Stone Style" footer="12" content={<MDX frontImg={kay_lcd_24_top} backImg={kay_lcd_24_back}/>}/>,
+          // <DefaultPageLayout header="KAY/Lab Created Diamond/25 - Solitaire Studs | Pendants " footer="13" content={<MDX frontImg={kay_lcd_25_top} backImg={kay_lcd_25_back}/>}/>,
+          // <DefaultPageLayout header="KAY/Lab Created Diamond/31 - Bridal CTR-CTW" footer="14" content={<MDX frontImg={kay_lcd_31_top} backImg={kay_lcd_31_back}/>}/>,
+          // <DefaultPageLayout header="KAY/Lab Created Diamond/33 - Solitaire Studs | Pendants" footer="15" content={<MDX frontImg={kay_lcd_33_top} backImg={kay_lcd_33_back}/>}/>,
+          // <DefaultPageLayout header="KAY/Lab Created Diamond/34 - Anniversary | Fashion" footer="16" content={<MDX frontImg={kay_lcd_34_top} backImg={kay_lcd_34_back}/>}/>,
 
           //Ruby
           <GSIPage3 header="KAY Ruby"/>,

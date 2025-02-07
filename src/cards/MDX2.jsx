@@ -77,40 +77,38 @@ const MDX2 = React.forwardRef((props, ref) => {
             
         },
         {
-            p1: "$ 2",
-            p2: "$ 2",
-            p3: "$ 2",
-            p4: "$ 2",
-            p5: "$ 2",
-            p6: "$ 2",
-            p7: "$ 2",
-            p8: "$ 2",
-            p9: "$ 2",
-            p10: "$ 2",
-            p11: "$ 2",
-            p12: "$ 2",
-            p13: "$ 2",
-            p14: "$ 2",
-            p15: "$ 2",
-            report: b
+          p1: props.priceMenu.p1,
+          p2: props.priceMenu.p2,
+          p3: props.priceMenu.p3,
+          p4: props.priceMenu.p4,
+          p5: props.priceMenu.p5,
+          p6: props.priceMenu.p6,
+          p7: props.priceMenu.p7,
+          p8: props.priceMenu.p8,
+          p9: props.priceMenu.p9,
+          p10: props.priceMenu.p10,
+          p11: props.priceMenu.p11,
+          p12: props.priceMenu.p12,
+          p13: props.priceMenu.p13,
+          p14: props.priceMenu.p14,
+          p15: props.priceMenu.p15,
         },
         {
-            p1: "$ 3",
-            p2: "$ 3",
-            p3: "$ 3",
-            p4: "$ 3",
-            p5: "$ 3",
-            p6: "$ 3",
-            p7: "$ 3",
-            p8: "$ 3",
-            p9: "$ 3",
-            p10: "$ 3",
-            p11: "$ 3",
-            p12: "$ 3",
-            p13: "$ 3",
-            p14: "$ 3",
-            p15: "$ 3",
-            report: c
+          p1: props.priceMenu.p1,
+          p2: props.priceMenu.p2,
+          p3: props.priceMenu.p3,
+          p4: props.priceMenu.p4,
+          p5: props.priceMenu.p5,
+          p6: props.priceMenu.p6,
+          p7: props.priceMenu.p7,
+          p8: props.priceMenu.p8,
+          p9: props.priceMenu.p9,
+          p10: props.priceMenu.p10,
+          p11: props.priceMenu.p11,
+          p12: props.priceMenu.p12,
+          p13: props.priceMenu.p13,
+          p14: props.priceMenu.p14,
+          p15: props.priceMenu.p15,
         }
       ]
     
@@ -120,7 +118,7 @@ const MDX2 = React.forwardRef((props, ref) => {
         <div style={{display: 'flex', flexDirection: 'row', margin: 'auto 0', justifyContent: 'center'}}>
           
           <div style={{display: 'flex', flexDirection: 'column', all: 'unset', justifyContent: 'center', alignItems: 'center', marginTop: 'auto', marginBottom: 'auto'}}>
-            {/* <button onClick={handleLeft}><img src={leftArrow} width="30px" height="30px"/></button> */}
+            { props.multiMDX == 'false' ? <></> :<button onClick={handleLeft}><img src={leftArrow} width="30px" height="30px"/></button>}
              
         </div>
         <div className="new-card-wrapper">
@@ -155,7 +153,7 @@ const MDX2 = React.forwardRef((props, ref) => {
           
         </div>
         <div style={{display: 'flex', flexDirection: 'column', all: 'unset', justifyContent: 'center', alignItems: 'center', marginTop: 'auto', marginBottom: 'auto'}}>
-            {/* <button onClick={handleRight}><img src={rightArrow} width="30px" height="30px"/></button> */}
+        {props.multiMDX == 'false' ? <></> :<button onClick={handleRight}><img src={rightArrow} width="30px" height="30px"/></button>}
              
         </div>
     
@@ -167,15 +165,15 @@ const MDX2 = React.forwardRef((props, ref) => {
             <p style={{marginLeft: '117px'}}>$13.00 three stone</p> */}
             
         </section>
-        <div style={{display: 'flex', flexDirection: 'row', margin: 'auto 0', justifyContent: 'center', justifyContent: 'space-evenly', marginTop: '10px'}}>
+        <div style={{display: 'flex', flexDirection: 'row', margin: 'auto 0', justifyContent: 'center', justifyContent: 'space-evenly', marginTop: '20px'}}>
         
         { props.menuType === 'true' ? 
-        <PricingBig price1={priceGrid[certSelected].p1} price2={priceGrid[certSelected].p2} price3={priceGrid[certSelected].p3} price4={priceGrid[certSelected].p4} price5={priceGrid[certSelected].p5} price6={priceGrid[certSelected].p6} price7={priceGrid[certSelected].p7} price8={priceGrid[certSelected].p8} price9={priceGrid[certSelected].p9} price10={priceGrid[certSelected].p10} price11={priceGrid[certSelected].p11} price12={priceGrid[certSelected].p12} price13={priceGrid[certSelected].p13} price14={priceGrid[certSelected].p14} price15={priceGrid[certSelected].p15} />
+        <PricingBig pricetitle={props.pricetitle} label1={props.label1} label2={props.label2} label3={props.label3} label4={props.label4} label5={props.label5} label6={props.label6} label7={props.label7} label8={props.label8} price1={priceGrid[certSelected].p1} price2={priceGrid[certSelected].p2} price3={priceGrid[certSelected].p3} price4={priceGrid[certSelected].p4} price5={priceGrid[certSelected].p5} price6={priceGrid[certSelected].p6} price7={priceGrid[certSelected].p7} price8={priceGrid[certSelected].p8} price9={priceGrid[certSelected].p9} price10={priceGrid[certSelected].p10} price11={priceGrid[certSelected].p11} price12={priceGrid[certSelected].p12} price13={priceGrid[certSelected].p13} price14={priceGrid[certSelected].p14} price15={priceGrid[certSelected].p15} />
         :
-         <Pricing price1={priceGrid[certSelected].p1} price2={priceGrid[certSelected].p2} price3={priceGrid[certSelected].p3} price4={priceGrid[certSelected].p4} price5={priceGrid[certSelected].p5} price6={priceGrid[certSelected].p6} price7={priceGrid[certSelected].p7} price8={priceGrid[certSelected].p8} price9={priceGrid[certSelected].p9} price10={priceGrid[certSelected].p10} price11={priceGrid[certSelected].p11} price12={priceGrid[certSelected].p12} price13={priceGrid[certSelected].p13} price14={priceGrid[certSelected].p14} price15={priceGrid[certSelected].p15} />}
+         <Pricing pricetitle={props.pricetitle} label1={props.label1} label2={props.label2} label3={props.label3} label4={props.label4} label5={props.label5} label6={props.label6} label7={props.label7} label8={props.label8} priceOn={props.placePrice} price1={priceGrid[certSelected].p1} price2={priceGrid[certSelected].p2} price3={priceGrid[certSelected].p3} price4={priceGrid[certSelected].p4} price5={priceGrid[certSelected].p5} price6={priceGrid[certSelected].p6} price7={priceGrid[certSelected].p7} price8={priceGrid[certSelected].p8} price9={priceGrid[certSelected].p9} price10={priceGrid[certSelected].p10} price11={priceGrid[certSelected].p11} price12={priceGrid[certSelected].p12} price13={priceGrid[certSelected].p13} price14={priceGrid[certSelected].p14} price15={priceGrid[certSelected].p15} />}
         
         <div style={{display:'flex', flexDirection:'column', justifyContent: 'center', alignItems:'center', }}>
-          <img src={props.tail} height='50px' style={{marginBottom: "75px"}}/>
+          <img src={props.tail} height='60px' width="300px" style={{marginBottom: "75px"}}/>
           <div>
                           {/* <img src={checkmark} width="20px" height="20px" style={{visibility: 'hidden'}} /> */}
                             <b><a style={{fontSize: '25px'}}>Includes</a></b>
