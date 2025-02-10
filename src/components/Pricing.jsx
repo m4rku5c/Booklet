@@ -65,7 +65,7 @@ const Pricing = (props) => {
         </table>
         }
 
-        <section style={{marginTop: '10px', display:'flex', flexDirection: 'column', fontSize: '12px'}}>
+        <section className='pricing-bottom' style={{marginTop: '10px', display:'flex', flexDirection: 'column', fontSize: '12px'}}>
             {/* <a>Laser Inscription Price:</a>
             <a >$5.00 Per Stone</a>
             <a >$9.00 Studs / 2 Stone</a>

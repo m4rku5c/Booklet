@@ -64,6 +64,24 @@ const TableOfContents = React.forwardRef((props, ref) => {
       }));
     }
 
+    if (layer === "nafnat") {
+      setExpanded((prev) => ({
+        ...prev,
+        ["naflcd"]: false,
+      }));
+
+      
+    }
+
+    if (layer === "naflcd") {
+      setExpanded((prev) => ({
+        ...prev,
+        ["nafnat"]: false,
+      }));
+
+      
+    }
+
     
     
     const turnOffLeoComponents = () => {
@@ -223,6 +241,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
   <button onClick={() => props.functionInput(18)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>18</button>
 </li>
 
+
                    
                   
                </ul>
@@ -262,11 +281,11 @@ const TableOfContents = React.forwardRef((props, ref) => {
                    <li>35 - Minimum Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>36 - Minimum Mens .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li> */}
 
-<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+{/* <li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
   <span style={{ flex: 1 }}>35 - Minimum Fashion</span>
   <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
   <button onClick={() => props.functionInput(18)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>18</button>
-</li>
+</li> */}
 
 <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
   <span style={{ flex: 1 }}>21 - Bridal Regular</span>
@@ -334,6 +353,12 @@ const TableOfContents = React.forwardRef((props, ref) => {
   <button onClick={() => props.functionInput(42)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>42</button>
 </li>
 
+<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%",display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1}}>36 - Mini Minimum</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(44)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>44</button>
+</li>
+
 
 
 
@@ -350,13 +375,19 @@ const TableOfContents = React.forwardRef((props, ref) => {
                       <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
                         <span style={{ flex: 1 }}>51 - Ruby Only</span>
                         <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
-                        <button onClick={() => props.functionInput(46)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>46</button>
+                        <button onClick={() => props.functionInput(46)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>.</button>
                       </li>
 
                       <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
                         <span style={{ flex: 1 }}>52 - Ruby & Natural Diamond</span>
                         <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
-                        <button onClick={() => props.functionInput(47)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>47</button>
+                        <button onClick={() => props.functionInput(47)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>48</button>
+                      </li>
+
+                      <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                        <span style={{ flex: 1 }}>53 - Ruby & Lab Created Diamond</span>
+                        <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                        <button onClick={() => props.functionInput(47)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>.</button>
                       </li>
 
                   </ul>
@@ -366,7 +397,111 @@ const TableOfContents = React.forwardRef((props, ref) => {
                   {expanded.brands && (
                     <ul className="layer 3">
 
-                                <li onClick={() => toggleLayer("leo")}>The Leo Diamond</li>
+                               
+
+                               
+
+<li onClick={() => toggleLayer("naf")}>Now and Forever</li>
+                                {expanded.naf && (
+                                  <ul  className="layer 4">
+                                  <li onClick={() => toggleLayer("nafnat")}>Natural</li>
+                                    {expanded.nafnat && (
+                                      <ul className="layer 5">
+                                       <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                        <span style={{ flex: 1 }}>21 - Bridal</span>
+                                        <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                        <button onClick={() => props.functionInput(52)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>52</button>
+                                      </li>
+
+                                      <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                        <span style={{ flex: 1 }}>34 - Anniversary</span>
+                                        <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                        <button onClick={() => props.functionInput(54)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>54</button>
+                                      </li>
+                                    </ul>
+                                    )}
+                                    <li onClick={() => toggleLayer("naflcd")}>Lab Created Diamond</li>
+                                    {expanded.naflcd && (
+                                      <ul className="layer 5">
+                                         <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                            <span style={{ flex: 1 }}>21 - Bridal</span>
+                                            <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                            <button onClick={() => props.functionInput(56)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>56</button>
+                                          </li>
+
+                                          <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                            <span style={{ flex: 1 }}>34 - Anniversary</span>
+                                            <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                            <button onClick={() => props.functionInput(58)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>58</button>
+                                          </li>
+
+                                          <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                            <span style={{ flex: 1 }}>31 - Minimum Bridal</span>
+                                            <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                            <button onClick={() => props.functionInput(60)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>60</button>
+                                          </li>
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("mmm")}>Memories Moments Magic</li>
+                                {expanded.mmm && (
+                                  <ul className="layer 4">
+                                 
+                                    <li onClick={() => toggleLayer("mmmlcd")}>Lab Created Diamond</li>
+                                    {expanded.mmmlcd && (
+                                      <ul className="layer 5">
+                                        <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                            <span style={{ flex: 1 }}>23 - 3 Stone Style</span>
+                                            <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                            <button onClick={() => props.functionInput(62)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>62</button>
+                                          </li>
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("leoideal")}>Leo Ideal</li>
+                                {expanded.leoideal && (
+                                  <ul className="layer 4">
+                                      <li onClick={() => toggleLayer("naturalleoideal")}>Natural</li>
+                                    {expanded.naturalleoideal && (
+                                      <ul className="layer 5">
+                                          <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                            <span style={{ flex: 1 }}>21 - Bridal</span>
+                                            <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                            <button onClick={() => props.functionInput(64)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>64</button>
+                                          </li>
+                                          <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                            <span style={{ flex: 1 }}>22 - Solitaire</span>
+                                            <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                            <button onClick={() => props.functionInput(66)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>66</button>
+                                          </li>
+
+                                          <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                            <span style={{ flex: 1 }}>23 - 3 Stone Style</span>
+                                            <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                            <button onClick={() => props.functionInput(68)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>68</button>
+                                          </li>
+
+                                          <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                            <span style={{ flex: 1 }}>34 - Minimum Anniversary</span>
+                                            <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                            <button onClick={() => props.functionInput(70)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>70</button>
+                                          </li>
+
+                                          <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                                            <span style={{ flex: 1 }}>35 - Minimum Fashion</span>
+                                            <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                                            <button onClick={() => props.functionInput(72)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>72</button>
+                                          </li>
+                                    </ul>
+                                    )}
+                                </ul>
+                                )}
+
+<li onClick={() => toggleLayer("leo")}>The Leo Diamond</li>
                                 {expanded.leo && (
                                   <ul className="layer 4">
                                   <li onClick={() => toggleLayer("naturalleo")}>Natural</li>
@@ -378,23 +513,11 @@ const TableOfContents = React.forwardRef((props, ref) => {
                                 </ul>
                                 )}
 
-                                <li onClick={() => toggleLayer("leofl")}>Leo First Light</li>
+<li onClick={() => toggleLayer("leofl")}>Leo First Light</li>
                                 {expanded.leofl && (
                                   <ul className="layer 4">
                                   <li onClick={() => toggleLayer("naturalleofl")}>Natural</li>
                                     {expanded.naturalleofl && (
-                                      <ul className="layer 5">
-                                      
-                                    </ul>
-                                    )}
-                                </ul>
-                                )}
-
-<li onClick={() => toggleLayer("leoideal")}>Leo Ideal</li>
-                                {expanded.leoideal && (
-                                  <ul className="layer 4">
-                                      <li onClick={() => toggleLayer("naturalleoideal")}>Natural</li>
-                                    {expanded.naturalleoideal && (
                                       <ul className="layer 5">
                                       
                                     </ul>
@@ -470,36 +593,8 @@ const TableOfContents = React.forwardRef((props, ref) => {
                                 </ul>
                                 )}
 
-<li onClick={() => toggleLayer("mmm")}>Memories Moments Magic</li>
-                                {expanded.mmm && (
-                                  <ul className="layer 4">
-                                 
-                                    <li onClick={() => toggleLayer("mmmlcd")}>Lab Created Diamond</li>
-                                    {expanded.mmmlcd && (
-                                      <ul className="layer 5">
-                                      
-                                    </ul>
-                                    )}
-                                </ul>
-                                )}
 
-<li onClick={() => toggleLayer("naf")}>Now and Forever</li>
-                                {expanded.naf && (
-                                  <ul className="layer 4">
-                                  <li onClick={() => toggleLayer("nafnat")}>Natural</li>
-                                    {expanded.nafnat && (
-                                      <ul className="layer 5">
-                                      
-                                    </ul>
-                                    )}
-                                    <li onClick={() => toggleLayer("naflcd")}>Lab Created Diamond</li>
-                                    {expanded.naflcd && (
-                                      <ul className="layer 5">
-                                      
-                                    </ul>
-                                    )}
-                                </ul>
-                                )}
+
 
 <li onClick={() => toggleLayer("kaysig")}>Kay Signature</li>
                                 {expanded.kaysig && (

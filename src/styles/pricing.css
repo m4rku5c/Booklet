@@ -2,3 +2,10 @@ table, tr, td, th {
     align-items: center;
     text-align: center;
 }
+
+.pricing-bottom {
+    background-color: rgb(204, 203, 203);
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgba(205, 219, 224, 0.643);
+}

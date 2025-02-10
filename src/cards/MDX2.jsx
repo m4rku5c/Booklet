@@ -176,37 +176,42 @@ const MDX2 = React.forwardRef((props, ref) => {
         :
          <Pricing pricetitle={props.pricetitle} label1={props.label1} label2={props.label2} label3={props.label3} label4={props.label4} label5={props.label5} label6={props.label6} label7={props.label7} label8={props.label8} priceOn={props.placePrice} price1={priceGrid[certSelected].p1} price2={priceGrid[certSelected].p2} price3={priceGrid[certSelected].p3} price4={priceGrid[certSelected].p4} price5={priceGrid[certSelected].p5} price6={priceGrid[certSelected].p6} price7={priceGrid[certSelected].p7} price8={priceGrid[certSelected].p8} price9={priceGrid[certSelected].p9} price10={priceGrid[certSelected].p10} price11={priceGrid[certSelected].p11} price12={priceGrid[certSelected].p12} price13={priceGrid[certSelected].p13} price14={priceGrid[certSelected].p14} price15={priceGrid[certSelected].p15} />}
         
-        <div style={{display:'flex', flexDirection:'column', justifyContent: 'center', }}>
+        <div style={{display:'flex', flexDirection:'column' }}>
           <img src={props.tail} height='60px' width="300px" style={{marginBottom: "40px"}}/>
           <div className='includes-box'>
                           {/* <img src={checkmark} width="20px" height="20px" style={{visibility: 'hidden'}} /> */}
                             <b><p style={{unset: 'all',fontSize: '25px',}}>Includes</p></b>
                             <hr width="100px"></hr>
                             <div className=''>
-                              <img src={checkmark} width="20px" height="20px" />
-                              <a>Cert Card</a>
-                              {/* <div>This is the inscription comment</div> */}
-                            </div>
-                            <div className=''>
-                              <img src={checkmark} width="20px" height="20px" />
-                              <a>Cert Sleeve</a>
+                              { props.pi1 != null ? (<><img src={checkmark} width="20px" height="20px" />
+                              <a>{props.pi1}</a></>) : (<></>)}
+                              
                               
                             </div>
                             <div className=''>
-                              <img src={checkmark} width="20px" height="20px" />
-                              <a>QR Code Tag</a>
+                            { props.pi2 != null ? (<><img src={checkmark} width="20px" height="20px" />
+                              <a>{props.pi2}</a></>) : (<></>)}
+                            </div>
+                            <div className=''>
+                            { props.pi3 != null ? (<><img src={checkmark} width="20px" height="20px" />
+                              <a>{props.pi3}</a></>) : (<></>)}
                               
                             </div>
                             <div className=''>
-                              <img src={checkmark} width="20px" height="20px" />
-                              <a>Diamond(s) Laser Inscription</a>
+                            { props.pi4 != null ? (<><img src={checkmark} width="20px" height="20px" />
+                              <a>{props.pi4}</a></>) : (<></>)}
                               
                             </div>
                             <div className=''>
-                              <img src={checkmark} width="20px" height="20px" />
-                              <a>E-Cert</a>
-                              
+                            { props.pi5 != null ? (<><img src={checkmark} width="20px" height="20px" />
+                              <a>{props.pi5}</a></>) : (<></>)}                   
                             </div>
+
+                            <div className=''>
+                            { props.pi6 != null ? (<><img src={checkmark} width="20px" height="20px" />
+                              <a>{props.pi6}</a></>) : (<></>)}                   
+                            </div>
+                            
                             
           </div>
                           </div>
