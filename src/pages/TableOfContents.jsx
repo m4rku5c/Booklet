@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import "../styles/page.css"
+import "../styles/toc.css"
 import uparrow from '../../public/assets/uparrow.png'
 import uparrow2 from '../../public/assets/up.png'
 
 const TableOfContents = React.forwardRef((props, ref) => {
   const [openCategory, setOpenCategory] = useState(null)
   const [expanded, setExpanded] = useState({})
+  
 
   const toggleTopLevel = (category) => {
     setOpenCategory((prev) => (prev === category ? null : category))
@@ -25,6 +27,17 @@ const TableOfContents = React.forwardRef((props, ref) => {
         ...prev,
         ["lcd"]: false,
         ["gemstone"] : false,
+        ["brands"] : false,
+      }));
+
+      
+    }
+
+    if (layer === "gemstone") {
+      setExpanded((prev) => ({
+        ...prev,
+        ["lcd"]: false,
+        ["minedDiamond"] : false,
         ["brands"] : false,
       }));
 
@@ -51,12 +64,40 @@ const TableOfContents = React.forwardRef((props, ref) => {
       }));
     }
 
-    if (layer === "gemstone") {
+    
+    
+    const turnOffLeoComponents = () => {
+      return {
+        leo: false,
+        leofl: false,
+        leoideal: false,
+        leop: false,
+        leoleg: false,
+        neillane: false,
+        monique: false,
+        mmm: false, 
+        naf: false,
+        kaysig: false,
+      };
+    };
+  
+    // Check if the clicked layer is a Leo component, and if so, turn off all Leo components
+    if (
+      layer === "leo" ||
+      layer === "leofl" ||
+      layer === "leoideal" ||
+      layer === "leop" ||
+      layer === "leoleg" ||
+      layer === "neillane" ||
+      layer === "monique" ||
+      layer === "mmm" ||
+      layer === "naf" ||
+      layer === "kaysig"
+    ) {
       setExpanded((prev) => ({
         ...prev,
-        ["minedDiamond"]: false,
-        ["lcd"] : false,
-        ["brands"] : false,
+        ...turnOffLeoComponents(),
+        [layer]: prev[layer],
       }));
     }
     
@@ -84,15 +125,18 @@ const TableOfContents = React.forwardRef((props, ref) => {
           Welcome To Signet:
           <br /> GSI Catalog
         </h2>
-        <div style={{ position: "absolute", top: 0, left: 0, marginTop: "140px", cursor: "pointer" }}>
+        <div style={{ cursor: "pointer" }}>
           <ul className="layer1" style={{ fontSize: "25px" }}>
 
             {/* When no category is selected, show all */}
             {openCategory === null && (
               <>
-                <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel("kay")}>
-                  KAY ................................................................... <button onClick={() => props.functionInput(4)} style={{all: 'unset'}}>4</button>
-                </li>
+             <li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }} onClick={() => toggleTopLevel("kay")}>
+              <span style={{ flex: 1}}>KAY</span>
+              <span style={{ flexGrow: 8, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+              <button onClick={() => props.functionInput(4)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>4</button>
+            </li>
+
                 {/* <li style={{ cursor: "pointer" }} onClick={() => toggleTopLevel("kayoutlet")}>
                   KAY Outlet ........................................................ 20
                 </li>
@@ -121,17 +165,64 @@ const TableOfContents = React.forwardRef((props, ref) => {
                   <li onClick={() => toggleLayer("minedDiamond")}>Natural Diamond</li>
                   {expanded.minedDiamond && (
                    <ul>
-                        
+{/*                         
                    <li>21 - Bridal Regular ................................. <button onClick={() => props.functionInput(6)} style={{all: 'unset'}}>6</button></li>
                    <li>22 - Bridal Solitaire ................................ <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>23 - 3 Stone Styles ............................... <button onClick={() => props.functionInput(10)} style={{all: 'unset'}}>10</button></li>
-                   {/* <li>24 - 2 Stone Styles .............................. <button onClick={() => props.functionInput(12)} style={{all: 'unset'}}></button></li> */}
                    <li>25 - Solitaire Studs ............................... <button onClick={() => props.functionInput(12)} style={{all: 'unset'}}>12</button></li>
                    <li>26 - Solitaire Pendants ......................... <button onClick={() => props.functionInput(14)} style={{all: 'unset'}}>14</button></li>
                    <li>34 - Minimum Anniversary ................... <button onClick={() => props.functionInput(16)} style={{all: 'unset'}}>16</button></li>
                    <li>35 - Minimum Fashion ......................... <button onClick={() => props.functionInput(18)} style={{all: 'unset'}}>18</button></li>
-                   {/* <li>29 - Color Diamond .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>22</button></li> */}
-                   
+                    */}
+
+<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", display: 'flex', alignItems: 'center', whiteSpace: 'nowrap'}}>
+  <span style={{ flex: 1}}>21 - Bridal Regular</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(6)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>6</button>
+</li>
+
+<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%",display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1}}>22 - Bridal Solitaire</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(8)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>8</button>
+</li>
+
+<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%",display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1}}>23 - 3 Stone Styles</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(10)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>10</button>
+</li>
+
+{/* <li>
+  <span style={{ flex: 1}}>24 - 2 Stone Styles</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(12)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}></button>
+</li> */}
+
+<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%",display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1}}>25 - Solitaire Studs</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(12)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>12</button>
+</li>
+
+<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%",display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1}}>26 - Solitaire Pendants</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(14)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>14</button>
+</li>
+
+<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%",display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1}}>34 - Minimum Anniversary</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(16)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>16</button>
+</li>
+
+<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%",display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1}}>35 - Minimum Fashion</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(18)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>18</button>
+</li>
+
                    
                   
                </ul>
@@ -149,7 +240,7 @@ const TableOfContents = React.forwardRef((props, ref) => {
                     
                     */}
                    
-                   <li>21 - Bridal Regular ................................ <button onClick={() => props.functionInput(22)} style={{all: 'unset'}}>22</button></li>
+                   {/* <li>21 - Bridal Regular ................................ <button onClick={() => props.functionInput(22)} style={{all: 'unset'}}>22</button></li>
                    <li>22 - Bridal Solitaire ............................... <button onClick={() => props.functionInput(24)} style={{all: 'unset'}}>24</button></li>
                    <li>23 - 3 Stone Styles ................................ <button onClick={() => props.functionInput(26)} style={{all: 'unset'}}>26</button></li>
                    <li>24 - 2 Stone Styles ................................ <button onClick={() => props.functionInput(28)} style={{all: 'unset'}}>28</button></li>
@@ -159,7 +250,8 @@ const TableOfContents = React.forwardRef((props, ref) => {
                    <li>32 - Minimum Bridal Solitaire ............... <button onClick={() => props.functionInput(36)} style={{all: 'unset'}}>36</button></li>
                    <li>33 - Solitaire Studs ................................ <button onClick={() => props.functionInput(38)} style={{all: 'unset'}}>38</button></li>
                    <li>34 - Anniversary ..................................... <button onClick={() => props.functionInput(40)} style={{all: 'unset'}}>40</button></li>
-                   <li>35 - Fahsion ............................................ <button onClick={() => props.functionInput(42)} style={{all: 'unset'}}>42</button></li>
+                   <li>35 - Fahsion ............................................ <button onClick={() => props.functionInput(42)} style={{all: 'unset'}}>42</button></li> */}
+
                    {/* <li>27 - Anniversary .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>28 - Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>29 - Color Diamond .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
@@ -170,6 +262,77 @@ const TableOfContents = React.forwardRef((props, ref) => {
                    <li>35 - Minimum Fashion .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li>
                    <li>36 - Minimum Mens .................. <button onClick={() => props.functionInput(8)} style={{all: 'unset'}}>8</button></li> */}
 
+<li style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>35 - Minimum Fashion</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(18)} style={{ all: "unset", marginLeft: "10px", marginRight: "15px" }}>18</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>21 - Bridal Regular</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(22)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>22</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>22 - Bridal Solitaire</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(24)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>24</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>23 - 3 Stone Styles</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(26)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>26</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>24 - 2 Stone Styles</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(28)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>28</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>25 - Solitaire Studs</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(30)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>30</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>26 - Solitaire Pendants</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(32)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>32</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>31 - Minimum Bridal</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(34)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>34</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>32 - Minimum Bridal Solitaire</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(36)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>36</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>33 - Solitaire Studs</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(38)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>38</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>34 - Anniversary</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(40)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>40</button>
+</li>
+
+<li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+  <span style={{ flex: 1 }}>35 - Fashion</span>
+  <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+  <button onClick={() => props.functionInput(42)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>42</button>
+</li>
 
 
 
@@ -182,8 +345,20 @@ const TableOfContents = React.forwardRef((props, ref) => {
                   <li onClick={() => toggleLayer("gemstone")}>Ruby</li>
                   {expanded.gemstone && (
                     <ul>
-                    <li>51 - Ruby Only ........................................ <button onClick={() => props.functionInput(46)} style={{all: 'unset'}}>46</button></li>
-                    <li>52 - Ruby & Natural Diamond ................ <button onClick={() => props.functionInput(47)} style={{all: 'unset'}}>47</button></li>
+                   
+
+                      <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                        <span style={{ flex: 1 }}>51 - Ruby Only</span>
+                        <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                        <button onClick={() => props.functionInput(46)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>46</button>
+                      </li>
+
+                      <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                        <span style={{ flex: 1 }}>52 - Ruby & Natural Diamond</span>
+                        <span style={{ flexGrow: 20, borderBottom: "4px dotted gray", margin: "0 10px" }}></span>
+                        <button onClick={() => props.functionInput(47)} style={{ all: 'unset', marginLeft: '10px', marginRight: '15px' }}>47</button>
+                      </li>
+
                   </ul>
                   )}
 

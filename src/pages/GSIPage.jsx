@@ -2,6 +2,8 @@ import React, {useState, useRef} from "react"
 import '../styles/page.css'
 import gsiLogo from '../../public/assets/gsilogo.png'
 import gsiOfficialLogo from '../../public/assets/gsinewlogo.png'
+import gsione from '../../public/assets/gsione.png'
+import gsitwo from '../../public/assets/gsitwo.png'
 
 
 const GSIPage = React.forwardRef((props, ref) => {
@@ -38,9 +40,21 @@ const GSIPage = React.forwardRef((props, ref) => {
               </div>
            </div> */}
 
-          <div style={{display: 'flex'}}>
-            <img style={{position: 'absolute', bottom: 0, left: 0}} src = {gsiOfficialLogo} width='320px' height='160px' />
-          </div>
+          <div style={{position: 'relative', width: '100%', height: '100%'}}>
+  <img 
+    style={{position: 'absolute', bottom: 0, left: 0}} 
+    src={gsione} 
+    width='160px' 
+    height='160px' 
+  />
+  <img 
+    style={{position: 'absolute', bottom: 0, left: '160px', }} 
+    src={gsitwo} 
+    width='300px' 
+    height='300px' 
+  />
+</div>
+
           
         </div>
     </div>

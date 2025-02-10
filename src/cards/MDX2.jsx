@@ -25,36 +25,40 @@ const MDX2 = React.forwardRef((props, ref) => {
 
       const [certSelected, setCertSelected] = useState(0)
 
+      const [certSet, setCertSet] = useState(
+        [
+          props.frontImg && props.backImg ? { frontImg: props.frontImg, backImg: props.backImg } : null,
+          props.frontImg2 && props.backImg2 ? { frontImg: props.frontImg2, backImg: props.backImg2 } : null,
+          props.frontImg3 && props.backImg3 ? { frontImg: props.frontImg3, backImg: props.backImg3 } : null,
+        ].filter(Boolean) // Remove null values
+      );
+      
+
+      // const handleRight = () => {
+      //   if (certSelected < 2) {
+      //   setCertSelected((prev) => prev +1)
+      //   } else if (certSelected == 2) {
+      //   setCertSelected(0)
+      //   }
+      // }
       const handleRight = () => {
-        if (certSelected < 2) {
-        setCertSelected((prev) => prev +1)
-        } else if (certSelected == 2) {
-        setCertSelected(0)
-        }
-      }
+        setCertSelected((prev) => (prev + 1) % certSet.length);
+      };
+      
 
+      // const handleLeft = () => {
+      //   if (certSelected > 0) {
+      //       setCertSelected((prev) => prev - 1)
+      //   } else if (certSelected == 0) {
+      //       setCertSelected(2)
+      //   }
+      // }
       const handleLeft = () => {
-        if (certSelected > 0) {
-            setCertSelected((prev) => prev - 1)
-        } else if (certSelected == 0) {
-            setCertSelected(2)
-        }
-      }
+        setCertSelected((prev) => (prev - 1 + certSet.length) % certSet.length);
+      };
+      
 
-      const [certSet, setCertSet] = useState([
-            {
-              frontImg: props.frontImg,
-              backImg: props.backImg
-            },
-            {
-              frontImg: props.frontImg2,
-              backImg: props.backImg2
-            },
-            {
-              frontImg: props.frontImg3,
-              backImg: props.backImg3
-            },
-      ])
+     
 
       const priceGrid = [
         {
@@ -113,7 +117,7 @@ const MDX2 = React.forwardRef((props, ref) => {
       ]
     
       return (
-        <div style={{display: 'flex', flexDirection: 'column', margin: 'auto 0', justifyContent: 'center', justifyItems: 'center'}}>
+        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', justifyItems: 'center'}}>
         {/* // <div style={{display: "flex", marginLeft:'20px', position: 'absolute', top: 0, left: 0, marginTop: '140px'}} > */}
         <div style={{display: 'flex', flexDirection: 'row', margin: 'auto 0', justifyContent: 'center'}}>
           
@@ -172,11 +176,11 @@ const MDX2 = React.forwardRef((props, ref) => {
         :
          <Pricing pricetitle={props.pricetitle} label1={props.label1} label2={props.label2} label3={props.label3} label4={props.label4} label5={props.label5} label6={props.label6} label7={props.label7} label8={props.label8} priceOn={props.placePrice} price1={priceGrid[certSelected].p1} price2={priceGrid[certSelected].p2} price3={priceGrid[certSelected].p3} price4={priceGrid[certSelected].p4} price5={priceGrid[certSelected].p5} price6={priceGrid[certSelected].p6} price7={priceGrid[certSelected].p7} price8={priceGrid[certSelected].p8} price9={priceGrid[certSelected].p9} price10={priceGrid[certSelected].p10} price11={priceGrid[certSelected].p11} price12={priceGrid[certSelected].p12} price13={priceGrid[certSelected].p13} price14={priceGrid[certSelected].p14} price15={priceGrid[certSelected].p15} />}
         
-        <div style={{display:'flex', flexDirection:'column', justifyContent: 'center', alignItems:'center', }}>
-          <img src={props.tail} height='60px' width="300px" style={{marginBottom: "75px"}}/>
-          <div>
+        <div style={{display:'flex', flexDirection:'column', justifyContent: 'center', }}>
+          <img src={props.tail} height='60px' width="300px" style={{marginBottom: "40px"}}/>
+          <div className='includes-box'>
                           {/* <img src={checkmark} width="20px" height="20px" style={{visibility: 'hidden'}} /> */}
-                            <b><a style={{fontSize: '25px'}}>Includes</a></b>
+                            <b><p style={{unset: 'all',fontSize: '25px',}}>Includes</p></b>
                             <hr width="100px"></hr>
                             <div className=''>
                               <img src={checkmark} width="20px" height="20px" />
