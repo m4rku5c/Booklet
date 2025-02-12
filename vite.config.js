@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [react()],
   // for github pages
   base: "/Booklet",
+  server: {
+    port: 3000
+  }
 })

@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "start": "start http://localhost:3000/Booklet & npm run dev"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
