@@ -12,7 +12,7 @@ import TableOfContents from '../pages/TableOfContents'
 import GSIPage from '../pages/GSIPage'
 import GSIPage2 from '../pages/GSIPage2'
 import GSIPage3 from '../pages/GSIPage3'
-import signet from '../../public/assets/signet.png'
+import signet from '/assets/signet.png'
 
 import MDX from '../cards/MDX'
 import MDX2 from '../cards/MDX2'
@@ -331,7 +331,8 @@ import leoideal_21_top_2 from '../../public/assets/booklet/Kay/B/leoideal/leoide
 import leoideal_22_top from '../../public/assets/booklet/Kay/B/leoideal/leoideal_22_top.png'
 import leoideal_22_top_2 from '../../public/assets/booklet/Kay/B/leoideal/leoideal_22_top_2.png'
 import leoideal_23_top from '../../public/assets/booklet/Kay/B/leoideal/leoideal_23_top.png'
-import leoideal_23_top_2 from '../../public/assets/booklet/Kay/B/leoideal/leoideal_23_top_2.png'
+// import leoideal_23_top_2 from '../../public/assets/booklet/Kay/B/leoideal/leoideal_23_top_2.png'
+import leoideal_23_top_2 from '/assets/booklet/Kay/B/leoideal/leoideal_23_top_2.png'
 
 import leoideal_34_35_top from '../../public/assets/booklet/Kay/B/leoideal/leoideal_34_35_top.png'
 
@@ -825,7 +826,7 @@ function MyBook(props) {
 
     return ( 
       <div>
-        <div style={{position: 'absolute', left: 0, top: '50%'}}>
+        <div style={{position: 'absolute', left:0 }}>
           { isSidebarOpen ? <Sidebar sharedState={isSidebarOpen} setSharedState={setIsSideBarOpen} /> :  <button onClick={toggleSideBar} >
             <img alt="open arrow" src={openside} width="30px" height="30px"/>
           </button>}

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import BookEditor from './BookEditor'
 
 function Sidebar({sharedState, setSharedState}) {
 
@@ -16,7 +17,7 @@ function Sidebar({sharedState, setSharedState}) {
   return (
     <div className='sidebar-main-container'>
         <div className='sidebar-sub-container'>
-            <h3>Editor (WIP)</h3>
+            <BookEditor />
             <button onClick={closeSidebar}>Close</button>
         </div>
     </div>

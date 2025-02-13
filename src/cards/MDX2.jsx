@@ -169,7 +169,7 @@ const MDX2 = React.forwardRef((props, ref) => {
             <p style={{marginLeft: '117px'}}>$13.00 three stone</p> */}
             
         </section>
-        <div style={{display: 'flex', flexDirection: 'row', margin: 'auto 0', justifyContent: 'center', justifyContent: 'space-evenly', marginTop: '20px'}}>
+        <div style={{display: 'flex', flexDirection: 'row', margin: 'auto 0', justifyContent: 'space-evenly',  marginTop: '20px'}}>
         
         { props.menuType === 'true' ? 
         <PricingBig pricetitle={props.pricetitle} label1={props.label1} label2={props.label2} label3={props.label3} label4={props.label4} label5={props.label5} label6={props.label6} label7={props.label7} label8={props.label8} price1={priceGrid[certSelected].p1} price2={priceGrid[certSelected].p2} price3={priceGrid[certSelected].p3} price4={priceGrid[certSelected].p4} price5={priceGrid[certSelected].p5} price6={priceGrid[certSelected].p6} price7={priceGrid[certSelected].p7} price8={priceGrid[certSelected].p8} price9={priceGrid[certSelected].p9} price10={priceGrid[certSelected].p10} price11={priceGrid[certSelected].p11} price12={priceGrid[certSelected].p12} price13={priceGrid[certSelected].p13} price14={priceGrid[certSelected].p14} price15={priceGrid[certSelected].p15} />
