@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import BookEditor from './BookEditor'
 
-function Sidebar({sharedState, setSharedState}) {
+function Sidebar({sharedState, setSharedState, bookPages, setBookPages}) {
 
   const [bookTitle, setBookTitle] = useState("")
   const [coverImg, setCoverImg] = useState({})
@@ -17,7 +17,7 @@ function Sidebar({sharedState, setSharedState}) {
   return (
     <div className='sidebar-main-container'>
         <div className='sidebar-sub-container'>
-            <BookEditor />
+            <BookEditor bookPages={bookPages} setBookPages={setBookPages} />
             <button onClick={closeSidebar}>Close</button>
         </div>
     </div>

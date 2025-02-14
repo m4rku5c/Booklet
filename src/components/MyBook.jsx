@@ -827,7 +827,7 @@ function MyBook(props) {
     return ( 
       <div>
         <div style={{position: 'absolute', left:0 }}>
-          { isSidebarOpen ? <Sidebar sharedState={isSidebarOpen} setSharedState={setIsSideBarOpen} /> :  <button onClick={toggleSideBar} >
+          { isSidebarOpen ? <Sidebar sharedState={isSidebarOpen} setSharedState={setIsSideBarOpen} bookPages={bookPages} setBookPages={setBookPages} /> :  <button onClick={toggleSideBar} >
             <img alt="open arrow" src={openside} width="30px" height="30px"/>
           </button>}
          
