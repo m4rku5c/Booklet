@@ -355,6 +355,10 @@ function MyBook(props) {
 
    const [currentPage, setCurrentPage] = useState(0)
 
+   function SuccessMsg(txt) {
+    
+   }
+
    function handleGoTo(pageNum) {
     if (bookRef.current) {
       bookRef.current.pageFlip().flip(pageNum, "top")
@@ -682,7 +686,21 @@ function MyBook(props) {
             sideStoneMinColor={1} sideStoneMinClarity={1} sideStoneMinCarat={0} minTotalCarat={0} 
             cutGrade={1} polishSymmetry={1} measurements={0} treatments={1} metalTitle={0}/>  </>}/>,
 
-            <DefaultPageLayout header='KAY/ Branded/ Leo Ideal/ Natural Anniversary Minimum Certification' headerfunc={handleGoTo} footer="1" content={<MDX2 multiMDX={'false'} subtitle={"K-NAT-LI-34-P"} pricetitle={"Min. Grade Natural Diamond Certification: "} placePrice={'false'} label1={'$10.00 flat fee'} tail={leowt} menuType={'false'} priceMenu={priceMenu[0]} frontImg={leoideal_34_35_top} backImg={leoideal_back} frontImg2={kay_natural_22_top} backImg2={kay_natural_22_back} pi1={'E-Cert'} pi2={'Cert Card'} pi3={'Cert Sleeve'} pi4={'QR Code Tag'}  />}/>,
+            <DefaultPageLayout header='KAY/ Branded/ Leo Ideal/ Natural Anniversary Minimum Certification' headerfunc={handleGoTo} footer="1" 
+            content={<MDX2 
+              multiMDX={'false'} 
+            subtitle={"K-NAT-LI-34-P"} 
+            pricetitle={"Min. Grade Natural Diamond Certification: "} 
+            placePrice={'false'} 
+            label1={'$10.00 flat fee'} 
+            tail={leowt} 
+            menuType={'false'} 
+            priceMenu={priceMenu[0]} 
+            frontImg={leoideal_34_35_top} 
+            backImg={leoideal_back} 
+            frontImg2={kay_natural_22_top} 
+            backImg2={kay_natural_22_back} 
+            pi1={'E-Cert'} pi2={'Cert Card'} pi3={'Cert Sleeve'} pi4={'QR Code Tag'}  />}/>,
             <DefaultPageLayout2 header="Lab Validation Process" footer="9" content=
             {<><Details3 stoneScreening={1} stoneShape={1} 
             centerStoneActualColor={0} centerStoneActualClarity={0} centerStoneActualCarat={1} 
